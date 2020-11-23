@@ -115,11 +115,7 @@ $num_of_sub = mysqli_num_rows($query);
                         </p>
                     </div>
                         
-                    <div class="col-lg-6">
-                        <p>
-                            N0 of Students in Class: 
-                        </p>
-                    </div>
+                    
                     
                     <div class="col-lg-6">
                         <p>
