@@ -8,6 +8,8 @@ if (isset($_POST['ses_submit'])){
      
     $session = mysqli_real_escape_string($con,$_POST['session']);
 
+    
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
