@@ -321,7 +321,7 @@ if (isset($_POST['grade'])){
           } else {
             ?>
             <tr>
-            <td colspan = "9" align="center">
+            <td colspan = "11" align="center">
           <h2> 
               No Student in Class
           </h2>
