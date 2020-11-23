@@ -289,7 +289,7 @@ $num_of_sub = mysqli_num_rows($query);
         <br>
 
         <div>
-            <p><b>REMARK: </b><u> <?php if ($avg > ) ?></u> </p>
+            <p><b>REMARK: </b><u> <?php if ($avg > 50) ?></u> </p>
         </div>
 
         <div>
