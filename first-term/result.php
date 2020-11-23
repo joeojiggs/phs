@@ -289,8 +289,7 @@ $num_of_sub = mysqli_num_rows($query);
         <br>
 
         <div>
-            <p><b>REMARK: </b><u>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
-            &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp </u> </p>
+            <p><b>REMARK: </b><u> </u> </p>
         </div>
 
         <div>
