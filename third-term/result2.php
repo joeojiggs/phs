@@ -250,7 +250,10 @@ $num_of_sub = mysqli_num_rows($query);
                         
                             
                         </td>
+                        <td>
                         
+                            
+                        </td>
             
                         <td class= "text-primary"><b>
                         OVERALL:
