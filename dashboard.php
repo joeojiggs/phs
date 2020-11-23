@@ -13,7 +13,7 @@ if (isset($_POST['ses_submit'])){
     if (empty($query)){
         echo "<script> alert('Failed to update Session')</script>";
     }else{
-        echo "<script> alert('Academi Session Added Successfully.')</script>";
+        echo "<script> alert('Academic Session Added Successfully.')</script>";
     }
 
 
