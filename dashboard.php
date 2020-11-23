@@ -11,8 +11,10 @@ if (isset($_POST['ses_submit'])){
     $query = mysqli_query($con, "update set admin `session` = '$session'");
 
     if (empty($query)){
-        echo "<script></script>"
-    }
+        echo "<script> alert('Failed to add student')</script>";
+        }else{
+            echo "<script> alert('Student successfully Registered.')</script>";
+        }
 
 
 ?>
