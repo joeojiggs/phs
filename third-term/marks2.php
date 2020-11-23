@@ -285,7 +285,7 @@ if (isset($_POST['grade'])){
                <tr>
                <?php 
                $reg = $row['reg_no'];
-               $query2 = mysqli_query($con,"select * from students where Reg_Num ='$reg'"); 
+               $query2 = mysqli_query($con2,"select * from students where Reg_Num ='$reg'"); 
                $row2 = mysqli_fetch_array($query2);  
                $name = $row2['First_Name'].' '.$row2['Mid_Name'].' '.$row2['Last_Name']; ?>
                <td><?php echo $i ?></td>
