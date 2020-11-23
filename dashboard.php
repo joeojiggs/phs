@@ -63,7 +63,7 @@ include('php-includes/check-login-admin.php');
             if (empty($row['session'])){
                 ?>
                 <div class="alert alert-danger" role="alert">
-                    Sessio
+                    Aca
                 </div>
                 <?php
             }
