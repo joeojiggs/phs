@@ -252,7 +252,7 @@ if(isset($_POST['delete'])){
                <td><?php echo $row['subject_id']; ?></td>
                <td><?php echo $row['subject_name']; ?></td>
                <td>
-               <form method="post" action="marks.php" >
+               <form method="post" action="marks2.php" >
                                             
                     <input name="sub_id" value="<?php echo $row['subject_id']; ?>" type="hidden" >
                     <input name="class_name" value="basic4" type="hidden" >
