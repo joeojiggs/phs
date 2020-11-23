@@ -7,18 +7,18 @@ $class_name = ($_POST['class_name']);
 
 if (isset($_POST['save'])){
      
-    $first_test = mysqli_real_escape_string($con,$_POST['first_test']);
-    $second_test = mysqli_real_escape_string($con,$_POST['second_test']) ;
-    $third_test = mysqli_real_escape_string($con,$_POST['third_test']) ;
-    $exam = mysqli_real_escape_string($con,$_POST['exam']);
-    $reg_no = mysqli_real_escape_string($con,$_POST['reg_no']);
-    $sub_id = mysqli_real_escape_string($con,$_POST['sub_id']);
-    $class_name = mysqli_real_escape_string($con,$_POST['class_name']);
+    $first_test = mysqli_real_escape_string($con3,$_POST['first_test']);
+    $second_test = mysqli_real_escape_string($con3,$_POST['second_test']) ;
+    $third_test = mysqli_real_escape_string($con3,$_POST['third_test']) ;
+    $exam = mysqli_real_escape_string($con3,$_POST['exam']);
+    $reg_no = mysqli_real_escape_string($con3,$_POST['reg_no']);
+    $sub_id = mysqli_real_escape_string($con3,$_POST['sub_id']);
+    $class_name = mysqli_real_escape_string($con3,$_POST['class_name']);
     $total = $first_test + $second_test + $third_test + $exam ;
 
     $sql = "update ".$class_name."_".$sub_id." set `first test` = '$first_test', `second test` = '$second_test', `third_test` = '$third_test', `exam` = '$exam', `Total` = '$total' where reg_no = '$reg_no'";
 
-    $query = mysqli_query($con, $sql);
+    $query = mysqli_query($con3, $sql);
 
     if (empty($query)){
         echo '<script>alert("Failed") </script>';
@@ -99,7 +99,7 @@ if (isset($_POST['save'])){
                     <h1 class="page-header">
                     <?php 
                     $thissql = "select * from ".$class_name."_subject_list where subject_id = '$sub_id'";
-                    $thisquery = mysqli_query($con, $thissql); 
+                    $thisquery = mysqli_query($con3, $thissql); 
                     $thisrow = mysqli_fetch_array($thisquery);
                     echo $thisrow['subject_name']; 
                     ?> Result Spread Sheet for <?php echo $class_name?></h1>
@@ -127,13 +127,13 @@ if (isset($_POST['save'])){
             // output data of each row
             $i=1;
             $sql ="select * from ".$class_name."_".$sub_id;
-            $query= mysqli_query($con,$sql);
+            $query= mysqli_query($con3,$sql);
             if (mysqli_num_rows($query) > 0) {
 
             while($row = mysqli_fetch_array($query)) {
                 ?> 
                 <tr>
-                <?php $query2 = mysqli_query($con,"select * from students where Reg_Num =".$row['reg_no']); $row2 = mysqli_fetch_array($query2);  $name = $row2['First_Name'].' '.$row2['Mid_Name'].' '.$row2['Last_Name']; ?>
+                <?php $query2 = mysqli_query($con3,"select * from students where Reg_Num =".$row['reg_no']); $row2 = mysqli_fetch_array($query2);  $name = $row2['First_Name'].' '.$row2['Mid_Name'].' '.$row2['Last_Name']; ?>
                 <td><?php echo $i ?></td>
                 <td><?php echo $row['reg_no'] ?></td>
                 <td><?php echo $name ?></td>
@@ -197,7 +197,7 @@ if (isset($_POST['save'])){
         <?php
           
           
-          mysqli_close($con);
+          mysqli_close($con3);
      ?> 
                 
                  
