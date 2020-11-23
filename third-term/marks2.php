@@ -277,7 +277,7 @@ if (isset($_POST['grade'])){
           // output data of each row
           $i=1;
            $sql ="select * from ".$class_name."_".$sub_id;
-          $query= mysqli_query($con,$sql);
+          $query= mysqli_query($con3,$sql);
           if (mysqli_num_rows($query) > 0) {
 
           while($row = mysqli_fetch_array($query)) {
