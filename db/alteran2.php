@@ -18,7 +18,7 @@ Craete("sss2");
 Craete("sss3");
 
 function Craete ($value){
-    global $con2;
+    global $con;
 
     $i = 1; 
     while ($i < 16){
