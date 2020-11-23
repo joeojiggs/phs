@@ -146,7 +146,7 @@ if(isset($_POST['delete'])){
                     <?php $class="basic1"; include("class_tbl2.php"); ?> 
                     <?php $class="basic2"; include("class_tbl2.php"); ?> 
                     <?php $class="basic3"; include("class_tbl2.php"); ?> 
-                    <?php $class="basic4"; include("class_tbl.php"); ?> 
+                    <?php $class="basic4"; include("class_tbl2.php"); ?> 
                     <?php $class="basic5"; include("class_tbl.php"); ?> 
                     <?php $class="jss1"; include("class_tbl.php"); ?> 
                     <?php $class="jss2"; include("class_tbl.php"); ?> 
