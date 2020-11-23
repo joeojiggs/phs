@@ -155,7 +155,9 @@ $num_of_sub = mysqli_num_rows($query);
           <th>  
             2nd Test
           </th>
-          
+          <th>  
+            2nd Test
+          </th>
           <th>
             Exam
           </th>
