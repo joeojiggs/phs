@@ -133,7 +133,7 @@ if (isset($_POST['save'])){
             while($row = mysqli_fetch_array($query)) {
                 ?> 
                 <tr>
-                <?php $query2 = mysqli_query($con3,"select * from students where Reg_Num =".$row['reg_no']); $row2 = mysqli_fetch_array($query2);  $name = $row2['First_Name'].' '.$row2['Mid_Name'].' '.$row2['Last_Name']; ?>
+                <?php $query2 = mysqli_query($con,"select * from students where Reg_Num =".$row['reg_no']); $row2 = mysqli_fetch_array($query2);  $name = $row2['First_Name'].' '.$row2['Mid_Name'].' '.$row2['Last_Name']; ?>
                 <td><?php echo $i ?></td>
                 <td><?php echo $row['reg_no'] ?></td>
                 <td><?php echo $name ?></td>
