@@ -24,7 +24,7 @@ function Craete ($value){
     while ($i < 16){
     $table_name = $value."_subject".$i;
 
-    $query = mysqli_query($con2, "ALTER TABLE ".$table_name." 
+    $query = mysqli_query($con, "ALTER TABLE ".$table_name." 
     ADD (third_test int(11) NOT NULL )"
     );
 
