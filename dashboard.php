@@ -92,7 +92,7 @@ include('php-includes/check-login-admin.php');
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                             <input type="submit" name="reg_submit" value="Register" class="btn btn-success"> 
-                                    </form>
+                            </form>
                         </div>
                         </div>
                     </div>
