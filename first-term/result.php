@@ -127,7 +127,6 @@ $num_of_sub = mysqli_num_rows($query);
                         </p>
                     </div>
                     
-                    
                     <div class="col-lg-6">
                         <p>
                             N0 of Subjects offered: <u>&nbsp<?php echo $num_of_sub?>&nbsp</u>
