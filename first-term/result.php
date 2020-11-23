@@ -114,7 +114,7 @@ $num_of_sub = mysqli_num_rows($query);
                             Class: <u>&nbsp<?php echo $class_name?>&nbsp</u> Academic Session: <u>&nbsp<?php $qurey = mysqli_query($con, "select * from admin");
             $row = mysqli_fetch_assoc($qurey);
             echo ($row['session']);
-                ?>&nbsp</u> Term: <u>&nbsp Fir &nbsp</u>
+                ?>&nbsp</u> Term: <u>&nbsp First Ter &nbsp</u>
                         </p>
                     </div>
                     
