@@ -62,7 +62,7 @@ include('php-includes/check-login-admin.php');
             $row = mysqli_fetch_assoc($qurey);
             if (empty($row['session'])){
                 <div class="alert alert-danger" role="alert">
-                This is a danger alert—check it out!
+                    This is a danger alert—check it out!
                 </div>
             }
             ?>
