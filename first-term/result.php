@@ -105,7 +105,7 @@ $num_of_sub = mysqli_num_rows($query);
                         
                     <div class="col-lg-6">
                         <p>
-                            Overall Class Position: <u>&nbsp<?php echo $position?>&nbsp</u>
+                            Overall Class Position: <u>&nbsp<?php echo $position?>&nbsp</u> 
                         </p>
                     </div>
                         
