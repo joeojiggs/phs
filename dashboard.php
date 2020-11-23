@@ -60,7 +60,7 @@ include('php-includes/check-login-admin.php');
             </div>
             <?php $qurey = mysqli_query($con, "select * from admin");
             $row = mysqli_fetch_assoc($qurey);
-            if ()
+            if (iss)
             ?>
             <!-- /.row -->
             <div class="row">
