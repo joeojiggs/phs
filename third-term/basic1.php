@@ -2,7 +2,7 @@
 include('../php-includes/connect.php');
 include('../php-includes/check-login-admin.php');
 
-/*
+
 
 if(isset($_POST['submit'])){
     $sub_id = mysqli_real_escape_string($con3,$_POST['sub_id']);
