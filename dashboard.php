@@ -81,13 +81,13 @@ include('php-includes/check-login-admin.php');
                             </button>
                         </div>
                         <div class="modal-body">
-                        <form role="form" method="post">
+                            <form role="form" method="post">
                                        
                                        <div class="form-group">
                                            <label>First Name</label>
                                            <input class="form-control" placeholder="First Name" name="first_name" REQUIRED>
                                        </div>
-                                       
+
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
