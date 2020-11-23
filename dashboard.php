@@ -16,7 +16,7 @@ if (isset($_POST['ses_submit'])){
         echo "<script> alert('Academic Session Added Successfully.')</script>";
     }
 
-
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
