@@ -234,7 +234,7 @@ if (isset($_POST['grade'])){
                      
                     </h1>
                     
-<form action="edit.php" method="POST">
+<form action="edit2.php" method="POST">
 
 <input name="sub_id" value="<?php echo $sub_id ?>" type="hidden" >
 <input name="class_name" value="<?php echo $class_name ?>" type="hidden" >
