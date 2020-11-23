@@ -59,7 +59,7 @@ include('php-includes/check-login-admin.php');
                 <!-- /.col-lg-12 -->
             </div>
             <?php $qurey = mysqli_query($con, "select * from admin")
-            $row = mysqli_fetch_assoc()
+            $row = mysqli_fetch_assoc($qurey)
             ?>
             <!-- /.row -->
             <div class="row">
