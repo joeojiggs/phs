@@ -100,7 +100,7 @@ if (isset($_POST['grade'])){
 
                 
 
-                $query3 = mysqli_query($con, $sql3);
+                $query3 = mysqli_query($con3, $sql3);
 
                 $last_total = $total;
 
@@ -110,7 +110,7 @@ if (isset($_POST['grade'])){
         }
 
         $j = 1;
-        $query2 = mysqli_query($con,"select * from ".$class_name."_".$sub_id." where Total = '$olodo' "); 
+        $query2 = mysqli_query($con3,"select * from ".$class_name."_".$sub_id." where Total = '$olodo' "); 
 
         if (mysqli_num_rows($query2) > 0){
             while($row2 = mysqli_fetch_array($query2)){
