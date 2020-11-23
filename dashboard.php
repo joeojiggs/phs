@@ -58,7 +58,9 @@ include('php-includes/check-login-admin.php');
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
-            <?php mysqli_query($con, "select * from admin") ?>
+            <?php mysqli_query($con, "select * from admin")
+            
+            ?>
             <!-- /.row -->
             <div class="row">
                 <div class="col-lg-3 col-md-6">
