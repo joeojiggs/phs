@@ -92,7 +92,7 @@ include('php-includes/check-login-admin.php');
                     </div>
                 <br>
                 <br>
-                <>
+                <br>
                 
                 <?php
             }
