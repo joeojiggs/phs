@@ -83,10 +83,10 @@ include('php-includes/check-login-admin.php');
                         <div class="modal-body">
                             <form role="form" method="post">
                                        
-                                       <div class="form-group">
-                                           <label>First Name</label>
-                                           <input class="form-control" placeholder="First Name" name="first_name" REQUIRED>
-                                       </div>
+                                <div class="form-group">
+                                    <label>First Name</label>
+                                    <input class="form-control" placeholder="First Name" name="first_name" REQUIRED>
+                                </div>
 
                         </div>
                         <div class="modal-footer">
