@@ -8,8 +8,8 @@ $class_name = ($_POST['class_name']);
 if (isset($_POST['grade'])){
      
     
-    $sub_id = mysqli_real_escape_string($con,$_POST['sub_id']);
-    $class_name = mysqli_real_escape_string($con,$_POST['class_name']);
+    $sub_id = mysqli_real_escape_string($con2,$_POST['sub_id']);
+    $class_name = mysqli_real_escape_string($con2,$_POST['class_name']);
     
     
     // output data of each row
@@ -18,13 +18,13 @@ if (isset($_POST['grade'])){
     $last_total = "";
     $last_i;
     $sql ="select * from ".$class_name."_".$sub_id." where Total != '$olodo' order by length(Total), Total DESC";
-    $query= mysqli_query($con,$sql);
+    $query= mysqli_query($con2,$sql);
         if (mysqli_num_rows($query) > 0) {
 
             while($row = mysqli_fetch_array($query)) {
                 $reg_no = $row['reg_no'];
 
-                $query2 = mysqli_query($con,"select * from ".$class_name."_".$sub_id." where reg_no = '$reg_no' "); 
+                $query2 = mysqli_query($con2,"select * from ".$class_name."_".$sub_id." where reg_no = '$reg_no' "); 
                 $row2 = mysqli_fetch_array($query2);  
                 $total = $row2['Total'];
                 
@@ -100,7 +100,7 @@ if (isset($_POST['grade'])){
 
                 
 
-                $query3 = mysqli_query($con, $sql3);
+                $query3 = mysqli_query($con2, $sql3);
 
                 $last_total = $total;
 
@@ -110,7 +110,7 @@ if (isset($_POST['grade'])){
         }
 
         $j = 1;
-        $query2 = mysqli_query($con,"select * from ".$class_name."_".$sub_id." where Total = '$olodo' "); 
+        $query2 = mysqli_query($con2,"select * from ".$class_name."_".$sub_id." where Total = '$olodo' "); 
 
         if (mysqli_num_rows($query2) > 0){
             while($row2 = mysqli_fetch_array($query2)){
@@ -147,7 +147,7 @@ if (isset($_POST['grade'])){
                 $j++;
             } 
 
-            $query3 = mysqli_query($con, $sql3);
+            $query3 = mysqli_query($con2, $sql3);
 
         }
         
@@ -227,7 +227,7 @@ if (isset($_POST['grade'])){
                     <h1 class="page-header">
                     <?php 
                     $thissql = "select * from ".$class_name."_subject_list where subject_id = '$sub_id'";
-                    $thisquery = mysqli_query($con, $thissql); 
+                    $thisquery = mysqli_query($con2, $thissql); 
                     $thisrow = mysqli_fetch_array($thisquery);
                     echo $thisrow['subject_name']; 
                     ?> Result Spread Sheet for <?php echo $class_name?>
@@ -277,7 +277,7 @@ if (isset($_POST['grade'])){
           // output data of each row
           $i=1;
            $sql ="select * from ".$class_name."_".$sub_id;
-          $query= mysqli_query($con,$sql);
+          $query= mysqli_query($con2,$sql);
           if (mysqli_num_rows($query) > 0) {
 
           while($row = mysqli_fetch_array($query)) {
@@ -285,7 +285,7 @@ if (isset($_POST['grade'])){
                <tr>
                <?php 
                $reg = $row['reg_no'];
-               $query2 = mysqli_query($con,"select * from students where Reg_Num ='$reg'"); 
+               $query2 = mysqli_query($con2,"select * from students where Reg_Num ='$reg'"); 
                $row2 = mysqli_fetch_array($query2);  
                $name = $row2['First_Name'].' '.$row2['Mid_Name'].' '.$row2['Last_Name']; ?>
                <td><?php echo $i ?></td>
@@ -376,7 +376,7 @@ if (isset($_POST['grade'])){
         <?php
           
           
-          mysqli_close($con);
+          mysqli_close($con2);
      ?> 
                 
                  
