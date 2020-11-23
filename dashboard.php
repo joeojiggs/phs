@@ -58,7 +58,7 @@ include('php-includes/check-login-admin.php');
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
-            <?php $qurymysqli_query($con, "select * from admin")
+            <?php $qurey = mysqli_query($con, "select * from admin")
             $row = mysqli_fetch_assoc()
             ?>
             <!-- /.row -->
