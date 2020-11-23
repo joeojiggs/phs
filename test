@@ -1,0 +1,80 @@
+<!--=================================================-->
+<!--Roboto Slab Font [ OPTIONAL ] -->
+<link href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700" rel="stylesheet">
+<link href="http://fonts.googleapis.com/css?family=Roboto:500,400italic,100,700italic,300,700,500italic,400" rel="stylesheet">
+
+
+
+
+<!--Font Awesome [ OPTIONAL ]-->
+<link href="asset2/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<!--Switchery [ OPTIONAL ]-->
+<link href="asset2/switchery/switchery.min.css" rel="stylesheet">
+<!--Switchery [ OPTIONAL ]-->
+<link href="asset2/jvectormap/jquery-jvectormap.css" rel="stylesheet">
+<!--Bootstrap Select [ OPTIONAL ]-->
+<link href="asset2/bootstrap-select/bootstrap-select.min.css" rel="stylesheet">
+<!--Bootstrap Validator [ OPTIONAL ]-->
+<link href="asset2/bootstrap-validator/bootstrapValidator.min.css" rel="stylesheet">
+<!--Demo [ DEMONSTRATION ]-->
+<link href="asset2/css/demo/jquery-steps.min.css" rel="stylesheet">
+<!--Demo [ DEMONSTRATION ]-->
+<link href="asset2/css/demo/jasmine.css" rel="stylesheet">
+<!--/STYLESHEET-->
+<!--=================================================-->
+<!--Page Load Progress Bar [ OPTIONAL ]-->
+<link href="asset2/pace/pace.min.css" rel="stylesheet">
+<script src="asset2/pace/pace.min.js"></script>
+
+This worked for me. If you got Maximum execution time 300 exceeded in DBIMysqli.class.php file. Open the following file in text editor C:\xampp\phpMyAdmin\libraries\config.default.php then search the following line of code:
+
+$cfg[‘ExecTimeLimit’] = 300;
+and change value 300 to 900.
+
+https://surya2in1.wordpress.com/2015/07/28/fatal-error-maximum-execution-time-of-300-seconds-exceeded/
+
+if(isset($_POST['delete'])){
+  $sub_id = mysqli_real_escape_string($con,$_POST['sub_id']);
+
+  $query = mysqli_query($con,"delete from basic1_subject_list where subject_id = '$sub_id'");
+
+  $new = 0;
+  $query2 = mysqli_query($con,"update basic1_".$sub_id." set `first test` = '$new', `second test` ='$new', `exam` = '$new', `Total` = '$new', `grade` = '' ");
+      
+
+  if (empty($query) && empty($query2)){
+      echo '<script>alert("Failed") </script>';
+  }else{
+      echo '<script>alert("Deleted Successfully") </script>';
+  }
+
+}
+
+
+
+
+
+else {
+          
+          
+          ?>
+          <tr>
+             <td colspan = "5" align="center">
+                <h2> 
+                No Subject Added yet
+                </h2>
+             </td>
+          </tr>
+          <?php
+                }
+            ?> 
+                                </tbody> 
+        </table>
+        <form method="post" action="spreadsheet.php" >
+                                                    
+            <input name="class_name" value="kg1" type="hidden" >
+            <!-- Change this to a button or input when using this as a form -->
+            <input type="submit" name="seemarks" value="Class Spreadsheet"class="btn btn-warning ">
+        
+        </form>
+        <?php mysqli_close($con); ?>
