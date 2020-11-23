@@ -12,9 +12,9 @@ if (isset($_POST['ses_submit'])){
 
     if (empty($query)){
         echo "<script> alert('Failed to add student')</script>";
-        }else{
-            echo "<script> alert('Student successfully Registered.')</script>";
-        }
+    }else{
+        echo "<script> alert('Student successfully Registered.')</script>";
+    }
 
 
 ?>
