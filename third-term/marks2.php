@@ -8,8 +8,8 @@ $class_name = ($_POST['class_name']);
 if (isset($_POST['grade'])){
      
     
-    $sub_id = mysqli_real_escape_string($con,$_POST['sub_id']);
-    $class_name = mysqli_real_escape_string($con,$_POST['class_name']);
+    $sub_id = mysqli_real_escape_string($con3,$_POST['sub_id']);
+    $class_name = mysqli_real_escape_string($con3,$_POST['class_name']);
     
     
     // output data of each row
@@ -18,13 +18,13 @@ if (isset($_POST['grade'])){
     $last_total = "";
     $last_i;
     $sql ="select * from ".$class_name."_".$sub_id." where Total != '$olodo' order by length(Total), Total DESC";
-    $query= mysqli_query($con,$sql);
+    $query= mysqli_query($con3,$sql);
         if (mysqli_num_rows($query) > 0) {
 
             while($row = mysqli_fetch_array($query)) {
                 $reg_no = $row['reg_no'];
 
-                $query2 = mysqli_query($con,"select * from ".$class_name."_".$sub_id." where reg_no = '$reg_no' "); 
+                $query2 = mysqli_query($con3,"select * from ".$class_name."_".$sub_id." where reg_no = '$reg_no' "); 
                 $row2 = mysqli_fetch_array($query2);  
                 $total = $row2['Total'];
                 
