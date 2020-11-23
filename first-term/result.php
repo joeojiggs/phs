@@ -99,7 +99,7 @@ $num_of_sub = mysqli_num_rows($query);
                 
                     <div class="col-lg-6">
                         <p>
-                            Students' Name: <u>&nbsp<?php echo $stud_name?>&nbsp</u>
+                             Name: <u>&nbsp<?php echo $stud_name?>&nbsp</u>
                         </p>
                     </div>
                         
