@@ -6,7 +6,7 @@ include('php-includes/check-login-admin.php');
 
 if (isset($_POST['ses_submit'])){
      
-    $first_name = mysqli_real_escape_string($con,$_POST['first_name']);
+    $first_name = mysqli_real_escape_string($con,$_POST['session']);
 
 ?>
 <!DOCTYPE html>
