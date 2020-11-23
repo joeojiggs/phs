@@ -63,7 +63,7 @@ include('php-includes/check-login-admin.php');
             if (empty($row['session'])){
                 ?>
                 <div class="alert alert-danger" role="alert">
-                    Academic Session has not be set. Please Input a
+                    Academic Session has not be set. Please Input the Acade
                 </div>
                 <?php
             }
