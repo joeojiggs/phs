@@ -111,7 +111,7 @@ $num_of_sub = mysqli_num_rows($query);
                         
                     <div class="col-lg-6">
                         <p>
-                            Class: <u>&nbsp<?php echo $class_name?>&nbsp</u> Out of
+                            Class: <u>&nbsp<?php echo $class_name?>&nbsp</u> 
                         </p>
                     </div>
                         
