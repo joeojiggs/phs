@@ -85,7 +85,7 @@ include('php-includes/check-login-admin.php');
                                        
                                 <div class="form-group">
                                     <label>Academic Session</label>
-                                    <input class="form-control" placeholder="2019/2020" name="first_name" REQUIRED>
+                                    <input class="form-control" placeholder="2019/2020" name="session" REQUIRED>
                                 </div>
 
                         </div>
