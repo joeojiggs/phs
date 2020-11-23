@@ -4,7 +4,7 @@ include('php-includes/connect.php');
 include('php-includes/check-login-admin.php');
 
 
-if (isset($_POST['reg_submit'])){
+if (isset($_POST['ses_submit'])){
      
     $first_name = mysqli_real_escape_string($con,$_POST['first_name']);
 
