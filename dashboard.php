@@ -64,7 +64,7 @@ include('php-includes/check-login-admin.php');
                 ?>
                 <div class="alert alert-danger" role="alert">
                     Academic Session has not be set. Please Input the Academic Session!
-
+                </div>
                     <!-- Button trigger modal -->
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                     Input Academic Session
@@ -91,7 +91,7 @@ include('php-includes/check-login-admin.php');
                     </div>
                     </div>
 
-                </div>
+                
                 <?php
             }
             ?>
