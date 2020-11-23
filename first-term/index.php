@@ -192,7 +192,7 @@ include('../php-includes/check-login-admin.php');
                                         </span>
                                     </div>
                                     <div class="media-body">
-                                        <p class="text-2x mar-no text-thin text-right"><?php $query= mysqli_query($con,"select * from students where Class = 'kg3'"); $num_rows = mysqli_num_rows($query); echo $num_rows; ?></p></p>
+                                        <p class="text-2x mar-no text-thin text-right"><?php $query= mysqli_query($con,"select * from students where Class = 'prenur'"); $num_rows = mysqli_num_rows($query); echo $num_rows; ?></p></p>
                                         <p class="h5 mar-no text-right">Number of Students in <b>PRE NURSERY</b></p>
                                     </div>
                                 </div>
