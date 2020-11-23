@@ -39,7 +39,7 @@ if (isset($_POST['grade'])){
                     $grade = 'D';
                 }elseif ($total < 55 && $total >= 50){
                     $grade = 'E';
-                }elseif($total < 40){
+                }elseif($total < 0){
                     $grade = 'F';
                 }
 
