@@ -84,7 +84,7 @@ include('php-includes/check-login-admin.php');
                             <form role="form" method="post">
                                        
                                 <div class="form-group">
-                                    <label>First Name</label>
+                                    <label>Academc</label>
                                     <input class="form-control" placeholder="First Name" name="first_name" REQUIRED>
                                 </div>
 
