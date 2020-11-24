@@ -140,7 +140,7 @@ if (isset($_POST['ses_submit'])){
                                        
                                 <div class="form-group">
                                     <label>PRE NURSERY AND K.G</label>
-                                    <input class="form-control" placeholder="Input Various Classes Next term School Fees and " name="session" REQUIRED>
+                                    <input class="form-control" placeholder="Input Various Classes Next term School Fees and The School's Account Details" name="session" REQUIRED>
                                 </div>
 
                                 <div class="form-group">
