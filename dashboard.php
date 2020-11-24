@@ -115,7 +115,49 @@ if (isset($_POST['ses_submit'])){
                 <?php
             }
 
-            
+            if (empty($row['session'])){
+                ?>
+                <div class="alert alert-danger" role="alert">
+                    Academic Session has not be set. Please Input the Academic Session!
+                </div>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    Input Academic Session
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Enter Current Academic Session</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form role="form" method="post">
+                                       
+                                <div class="form-group">
+                                    <label>Academic Session</label>
+                                    <input class="form-control" placeholder="2019/2020" name="session" REQUIRED>
+                                </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <input type="submit" name="ses_submit" value="Save Changes" class="btn btn-success"> 
+                            </form>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                <br>
+                <br>
+                <br>
+                
+                <?php
+            }
             ?>
             <!-- /.row -->
             <div class="row">
