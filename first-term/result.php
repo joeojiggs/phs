@@ -231,7 +231,7 @@ $num_of_sub = mysqli_num_rows($query);
                                 echo "&nbsp &nbsp(Fair)";
                             }elseif  ($row['Total'] > 50){
                                 echo "&nbsp &nbsp(Pass)";
-                            }elseif  ($row['Total'] < 50){
+                            }elseif  ($avg < 50){
                                 echo "&nbsp &nbsp(Failed)";
                             }
                         ?>
@@ -270,19 +270,19 @@ $num_of_sub = mysqli_num_rows($query);
                         <td class= "text-primary"><b>
                         <?php echo $grade ;
                             if  ($avg > 90){
-                                echo "Distinction";   
+                                echo "&nbsp &nbsp(Distinction)";   
                             }elseif  ($avg > 80 ){
-                                echo "Excellent";   
+                                echo "&nbsp &nbsp(Excellent)";   
                             }elseif  ($avg > 70){
-                                echo "Very Good";
+                                echo "&nbsp &nbsp(Very Good)";
                             }elseif  ($avg > 60){
-                                echo "Good";
+                                echo "&nbsp &nbsp(Good)";
                             }elseif  ($avg > 55){
-                                echo "Fair";
+                                echo "&nbsp &nbsp(Fair)";
                             }elseif  ($avg > 50){
-                                echo "Pass";
+                                echo "&nbsp &nbsp(Pass)";
                             }elseif  ($avg < 50){
-                                echo "Failed";
+                                echo "&nbsp &nbsp(Failed)";
                             }
                         ?>
                         </b>
