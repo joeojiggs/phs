@@ -235,7 +235,7 @@ $num_of_sub = mysqli_num_rows($query);
                                 echo "&nbsp &nbsp(Failed)";
                             }
                         ?>
-                        </b>
+                        
                         </td>
                         
                         
