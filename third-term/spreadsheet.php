@@ -112,17 +112,17 @@ if (isset($_POST['process'])){
                 $avg = $row2['third_avg'];
                 
 
-                if ($avg >= 70){
+                if ($avg >= 80){
                     $grade = 'A';
-                }elseif ($avg < 70 && $avg >= 60 ){
+                }elseif ($avg < 80 && $avg >= 70 ){
                     $grade = 'B';
-                }elseif ($avg < 60 && $avg >= 50){
+                }elseif ($avg < 70 && $avg >= 60){
                     $grade = 'C';
-                }elseif ($avg < 50 && $avg >= 45){
+                }elseif ($avg < 60 && $avg >= 55){
                     $grade = 'D';
-                }elseif ($avg < 45 && $avg >= 40){
+                }elseif ($avg < 55 && $avg >= 50){
                     $grade = 'E';
-                }elseif($avg < 40){
+                }elseif($avg < 50){
                     $grade = 'F';
                 }
 
