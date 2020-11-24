@@ -153,7 +153,10 @@ if (isset($_POST['ses_submit'])){
                                     <input class="form-control" placeholder="2019/2020" name="session" REQUIRED>
                                 </div>
 
-                                
+                                <div class="form-group">
+                                    <label>Academic Session</label>
+                                    <input class="form-control" placeholder="2019/2020" name="session" REQUIRED>
+                                </div>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
