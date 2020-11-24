@@ -94,7 +94,7 @@ $num_of_sub = mysqli_num_rows($query);
             }elseif($class_name == "sss1" || $class_name == "sss2" || $class_name == "sss3" ){
                 echo ($row['sss']);
             }?>
-                    <img src="../images/phs.jpg" width ="100%">
+                    ><img src="../images/phs.jpg" width ="100%">
                     </div>
                     <br>
                     <br>
