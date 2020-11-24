@@ -158,6 +158,9 @@ $num_of_sub = mysqli_num_rows($query);
           <th>
             Position
           </th>
+          <th>
+            Position
+          </th>
           
           </tr>
           
