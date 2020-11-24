@@ -321,7 +321,7 @@ $num_of_sub = mysqli_num_rows($query);
                                 echo "A very good result. But like they say, their is always room for improvement. So go for it next time. Nice one dear.";
                             }elseif  ($avg > 60){
                                 echo "A good result but with added efforts and conscious study you can always do better, trust me.";
-                            }elseif  ($avg >5 5){
+                            }elseif  ($avg > 55){
                                 echo "A fair result, you really need to put more efforts to your studies to ensure an improved performance next time out. Remember you can always do better.";
                             }elseif  ($grade == "E"){
                                 echo "A very marginal pass. You really have to work hard at improving your grades to avoid total failure and risk of possible demotion.";
