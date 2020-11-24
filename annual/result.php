@@ -307,7 +307,7 @@ $num_of_sub = mysqli_num_rows($query);
                 }else {
             ?>
             <tr>
-            <td colspan = "8" align="center">
+            <td colspan = "11" align="center">
           <h2> 
               No Subject assigned to Class
           </h2>
