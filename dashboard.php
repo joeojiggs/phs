@@ -160,7 +160,7 @@ if (isset($_POST['ses_submit'])){
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <input type="submit" name="ses_submit" value="Save Changes" class="btn btn-success"> 
+                            <input type="submit" name="fee_submit" value="Save Changes" class="btn btn-success"> 
                             </form>
                         </div>
                         </div>
