@@ -83,8 +83,7 @@ $num_of_sub = mysqli_num_rows($query);
             <div class="row">
                 <div class="col-lg-12">
                 <a type="button" href="students.php" class="btn btn-danger"><--back</a>
-                    <h1 class="page-header" align = "center"><b>THE NAME OF THE SCHOOL</b></h1>
-                    <div style = "text-align:center;">
+                    
                     <img src="images/logo.png" width ="10%">
                     </div>
                     <p align = "center"><i>this is the school motto</i></p>
