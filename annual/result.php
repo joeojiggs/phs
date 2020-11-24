@@ -144,7 +144,7 @@ $num_of_sub = mysqli_num_rows($query);
           <th>Subjects</th>
           <th>1st Term (100%) </th>
           <th>  
-            2nd Term
+            2nd Term 
           </th>
           <th>
             3rd Term
