@@ -121,7 +121,7 @@ if (isset($_POST['ses_submit'])){
                     School Fees Comment has not been Inputed for Result Compilation. Please Input School Fees Comment for various schools!
                 </div>
                     <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modal">
                     Input School Fees Comment
                     </button>
 
