@@ -248,10 +248,10 @@ $num_of_sub = mysqli_num_rows($query);
                         <td class= "text-primary"><b>
                         <?php echo $grade ;
                             if  ($avg > 90){
-                                echo "&nbsp &nbsp(Excellent)";   
+                                echo "&nbsp &nbsp(Distinction)";   
                             }elseif  ($avg > 80 ){
                                 echo "&nbsp &nbsp(Excellent)";   
-                            }elseif  ($avg > 80 "B"){
+                            }elseif  ($avg 0  "B"){
                                 echo "&nbsp &nbsp(Good)";
                             }elseif  ($grade == "C"){
                                 echo "&nbsp &nbsp(Average)";
