@@ -309,7 +309,7 @@ $num_of_sub = mysqli_num_rows($query);
                                 echo "An average performance. Please, work harder for an improved result.";
                             }elseif  ($grade == "F"){
                                 echo "A below average performance. Please devote more time to your studies for an improved result.";
-                            } ?>&nbsp &nbsp </u> </p>
+                            } ?> &nbsp &nbsp </u> </p>
         </div>
 
         <div>
