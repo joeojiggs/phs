@@ -85,7 +85,7 @@ $num_of_sub = mysqli_num_rows($query);
                 <a type="button" href="students.php" class="btn btn-danger"><--back</a>
                     <br>
                     <br>
-                    <?php if ($class_name == "kg1" || $class_name == "kg2" || $class_name == "kg3" || $class_name == "prenur" ){
+                    <?php if ($class_name == "kg1" || $class_name == "kg2" || $class_name == "kg3" || $class_name == "prenur" ) {
                             ?> <img src="../images/pcs.jpg" width ="100%"> <?php ;
                         }elseif($class_name == "basic1" || $class_name == "basic2" || $class_name == "basic3" || $class_name == "basic4" || $class_name == "basic5" ){
                             ?><img src="../images/pcs.jpg" width ="100%"><?php ;
