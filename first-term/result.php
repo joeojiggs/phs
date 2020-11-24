@@ -293,6 +293,8 @@ $num_of_sub = mysqli_num_rows($query);
         </div>
 
         <div>
+            <p><b>Class Teacher Remark: </b><u>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+            &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp </u> </p>
         </div>
 
         <div>
