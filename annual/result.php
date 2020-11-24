@@ -86,7 +86,7 @@ $num_of_sub = mysqli_num_rows($query);
                     <br>
                     <br>
                     <?php if($class_name == "kg1" || $class_name == "kg2" || $class_name == "kg3" || $class_name == "prenur" ){
-                echo ($row['kg']);
+                ?><img src="../images/phs.jpg" width ="100%"><?php;
             }elseif($class_name == "basic1" || $class_name == "basic2" || $class_name == "basic3" || $class_name == "basic4" || $class_name == "basic5" ){
                 echo ($row['basic']);
             }elseif( $class_name == "jss1" || $class_name == "jss2" || $class_name == "jss3"){
