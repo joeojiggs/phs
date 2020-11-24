@@ -322,7 +322,7 @@ $num_of_sub = mysqli_num_rows($query);
                             }elseif  ($grade == "C"){
                                 echo "A good result but with added efforts and conscious study you can always do better, trust me.";
                             }elseif  ($grade == "D"){
-                                echo "(Pass)";
+                                echo "A fair result, you really need to put more efforts to your studies to ensure an improved performance next time out. Remember you can always do better.";
                             }elseif  ($grade == "E"){
                                 echo "(Poor)";
                             }elseif  ($grade == "F"){
