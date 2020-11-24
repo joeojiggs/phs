@@ -247,7 +247,7 @@ $num_of_sub = mysqli_num_rows($query);
                         
                         <td class= "text-primary"><b>
                         <?php echo $grade ;
-                            if  ($grade == "A"){
+                            if  ($avg == "A"){
                                 echo "&nbsp &nbsp(Excellent)";   
                             }elseif  ($grade == "B"){
                                 echo "&nbsp &nbsp(Good)";
