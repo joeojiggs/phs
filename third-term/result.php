@@ -83,13 +83,22 @@ $num_of_sub = mysqli_num_rows($query);
             <div class="row">
                 <div class="col-lg-12">
                 <a type="button" href="students.php" class="btn btn-danger"><--back</a>
-                    <h1 class="page-header" align = "center"><b>THE NAME OF THE SCHOOL</b></h1>
-                    <div style = "text-align:center;">
-                    <img src="images/logo.png" width ="10%">
+                    <br>
+                    <br>
+                    <?php if ($class_name == "kg1" || $class_name == "kg2" || $class_name == "kg3" || $class_name == "prenur" ) {
+                            ?> <img src="../images/pcs.jpg" width ="100%"> <?php ;
+                        }elseif ($class_name == "basic1" || $class_name == "basic2" || $class_name == "basic3" || $class_name == "basic4" || $class_name == "basic5" ){
+                            ?><img src="../images/pcs.jpg" width ="100%"><?php ;
+                        }elseif ( $class_name == "jss1" || $class_name == "jss2" || $class_name == "jss3") {
+                            ?><img src="../images/phs.jpg" width ="100%"><?php ;
+                        }elseif ($class_name == "sss1" || $class_name == "sss2" || $class_name == "sss3" ) {
+                            ?><img src="../images/phs.jpg" width ="100%"><?php ;
+                        }
+                    ?>
+                    
                     </div>
-                    <p align = "center"><i>this is the school motto</i></p>
-                    <p align = "center">School Address</p>
-                    <p align = "center">school website if any</p>
+                    <br>
+                    <br>
 
                     <h3 align = "center">TERMINAL REPORT CARD</h3>
                     <hr style = "border: solid 1px black">
