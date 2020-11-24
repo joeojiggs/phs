@@ -302,7 +302,7 @@ $num_of_sub = mysqli_num_rows($query);
                             }elseif  ($grade == "B"){
                                 echo "A great outing. Try harder next time for an improved performance.";
                             }elseif  ($grade == "C"){
-                                echo "(Average)";
+                                echo "A fairly nice result but I believe you can do better. Try harder next time out.";
                             }elseif  ($grade == "D"){
                                 echo "(Pass)";
                             }elseif  ($grade == "E"){
