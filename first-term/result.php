@@ -313,7 +313,7 @@ $num_of_sub = mysqli_num_rows($query);
         </div>
 
         <div>
-            <p><b>Directors Comment: </b><u>&nbsp &nbsp <?php if  ($avg > 90){
+            <p><b>Director's Comment: </b><u>&nbsp &nbsp <?php if  ($avg > 90){
                                 echo "An outstanding result. Keep it up and ensure you put more efforts in the subjects that had lower scores... Kudos to you dear.";   
                             }elseif  ($avg > 80 ){
                                 echo "&nbsp &nbsp(Excellent)";   
