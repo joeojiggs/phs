@@ -369,6 +369,8 @@ $num_of_sub = mysqli_num_rows($query);
                 echo ($row['session']);
             }elseif(){
                 echo ($row['session']);
+            }elseif(){
+                echo ($row['session']);
             }else
              ?>  </p>
         </div>
