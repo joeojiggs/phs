@@ -237,7 +237,26 @@ $num_of_sub = mysqli_num_rows($query);
                         <td>
                         <?php echo $row['grand_position']; ?>
                         </td>
+                        <td >
+                        <?php 
+                            if  ($row['Total'] > 90){
+                                echo "Distinction";   
+                            }elseif  ($row['Total'] > 80 ){
+                                echo "Excellent";   
+                            }elseif  ($row['Total'] > 70){
+                                echo "Very Good";
+                            }elseif  ($row['Total'] > 60){
+                                echo "Good";
+                            }elseif  ($row['Total'] > 55){
+                                echo "Fair";
+                            }elseif  ($row['Total'] > 50){
+                                echo "Pass";
+                            }elseif  ($row['Total'] < 50){
+                                echo "Failed";
+                            }
+                        ?>
                         
+                        </td>
                         
                         
                         </tr>
