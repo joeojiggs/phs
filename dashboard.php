@@ -18,7 +18,19 @@ if (isset($_POST['ses_submit'])){
 
 }
 
+if (isset($_POST['ses_submit'])){
+     
+    $session = mysqli_real_escape_string($con,$_POST['session']);
 
+    $query = mysqli_query($con, "update admin set `session` = '$session'");
+
+    if (empty($query)){
+        echo "<script> alert('Failed to update Session')</script>";
+    }else{
+        echo "<script> alert('Academic Session Added Successfully.')</script>";
+    }
+
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
