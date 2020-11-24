@@ -221,7 +221,7 @@ $num_of_sub = mysqli_num_rows($query);
                         <?php 
                             if  ($row['Total'] > 90){
                                 echo "&nbsp &nbsp(Distinction)";   
-                            }elseif  ($avg > 80 ){
+                            }elseif  ($row['Total']> 80 ){
                                 echo "&nbsp &nbsp(Excellent)";   
                             }elseif  ($avg > 70){
                                 echo "&nbsp &nbsp(Very Good)";
