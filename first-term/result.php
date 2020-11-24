@@ -255,7 +255,7 @@ $num_of_sub = mysqli_num_rows($query);
                                 echo "&nbsp &nbsp(Very Good)";
                             }elseif  ($grade > 60 ){
                                 echo "&nbsp &nbsp(Good)";
-                            }elseif  ($grade > 70){
+                            }elseif  ($grade > 55){
                                 echo "&nbsp &nbsp(Pass)";
                             }elseif  ($grade == "E"){
                                 echo "&nbsp &nbsp(Poor)";
