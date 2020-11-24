@@ -115,7 +115,7 @@ if (isset($_POST['process'])){
 
                 if ($avg >= 80){
                     $grade = 'A';
-                }elseif ($avg < 80 && $avg >= 60 ){
+                }elseif ($avg < 80 && $avg >= 70 ){
                     $grade = 'B';
                 }elseif ($avg < 60 && $avg >= 50){
                     $grade = 'C';
