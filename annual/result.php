@@ -243,7 +243,7 @@ $num_of_sub = mysqli_num_rows($query);
                                 echo "Distinction";   
                             }elseif  ($row['grand_total'] > 80 ){
                                 echo "Excellent";   
-                            }elseif  ($row['Total'] > 70){
+                            }elseif  ($row['grand_total'] > 70){
                                 echo "Very Good";
                             }elseif  ($row['Total'] > 60){
                                 echo "Good";
