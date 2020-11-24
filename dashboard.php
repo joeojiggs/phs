@@ -114,6 +114,8 @@ if (isset($_POST['ses_submit'])){
                 
                 <?php
             }
+
+            
             ?>
             <!-- /.row -->
             <div class="row">
