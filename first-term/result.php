@@ -232,7 +232,7 @@ $num_of_sub = mysqli_num_rows($query);
                             }elseif  ($row['Total'] > 50){
                                 echo "&nbsp &nbsp(Pass)";
                             }elseif  ($row['Total'] < 50){
-                                echo "Failed)";
+                                echo "Failed";
                             }
                         ?>
                         
