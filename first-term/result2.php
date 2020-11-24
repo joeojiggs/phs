@@ -147,7 +147,7 @@ $num_of_sub = mysqli_num_rows($query);
             2nd Test (10%)
           </th>
           <th>  
-            3rd Test
+            3rd Test (20%)
           </th>
           <th>
             Exam
