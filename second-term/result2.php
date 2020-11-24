@@ -372,7 +372,18 @@ $num_of_sub = mysqli_num_rows($query);
             <p>Date: <u>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp </u> </p>
         </div>
         <div>
-            <p>Next Resumption: <u>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp </u> </p>
+            <p>School Fees: &nbsp &nbsp <?php $qurey = mysqli_query($con, "select * from admin");
+            $row = mysqli_fetch_assoc($qurey);
+            if($class_name == "kg1" || $class_name == "kg2" || $class_name == "kg3" || $class_name == "prenur" ){
+                echo ($row['kg']);
+            }elseif($class_name == "basic1" || $class_name == "basic2" || $class_name == "basic3" || $class_name == "basic4" || $class_name == "basic5" ){
+                echo ($row['basic']);
+            }elseif( $class_name == "jss1" || $class_name == "jss2" || $class_name == "jss3"){
+                echo ($row['jss']);
+            }elseif($class_name == "sss1" || $class_name == "sss2" || $class_name == "sss3" ){
+                echo ($row['sss']);
+            }
+             ?>  </p>
         </div>
         
         <?php
