@@ -97,20 +97,53 @@ $num_of_sub = mysqli_num_rows($query);
                     
                     
                 
-                    <div>
-            <p>School Fees: &nbsp &nbsp <?php $qurey = mysqli_query($con, "select * from admin");
-            $row = mysqli_fetch_assoc($qurey);
-            if($class_name == "kg1" || $class_name == "kg2" || $class_name == "kg3" || $class_name == "prenur" ){
-                echo ($row['kg']);
-            }elseif($class_name == "basic1" || $class_name == "basic2" || $class_name == "basic3" || $class_name == "basic4" || $class_name == "basic5" ){
-                echo ($row['basic']);
-            }elseif( $class_name == "jss1" || $class_name == "jss2" || $class_name == "jss3"){
-                echo ($row['jss']);
-            }elseif($class_name == "sss1" || $class_name == "sss2" || $class_name == "sss3" ){
-                echo ($row['sss']);
-            }
-             ?>  </p>
-        </div>
+                    <div class="col-lg-6">
+                        <p>
+                            Students' Name: <u>&nbsp<?php echo $stud_name?>&nbsp</u>
+                        </p>
+                    </div>
+                        
+                    <div class="col-lg-6">
+                        <p>
+                            Overall Class Position: <u>&nbsp<?php echo $position?>&nbsp</u>
+                        </p>
+                    </div>
+                        
+                    <div class="col-lg-6">
+                        <p>
+                            Class: <u>&nbsp<?php echo $class_name?>&nbsp</u>
+                        </p>
+                    </div>
+                        
+                    <div class="col-lg-6">
+                        <p>
+                            N0 of Students in Class: <u>&nbsp<?php echo $num_of_stud_in_class?>&nbsp</u>
+                        </p>
+                    </div>
+                    
+                    <div class="col-lg-6">
+                        <p>
+                            Registration Number: <u>&nbsp<?php echo $reg_no?>&nbsp</u>
+                        </p>
+                    </div>
+                    
+                    <div class="col-lg-6">
+                        <p>
+                            Student Average: <u>&nbsp<?php echo $avg?>&nbsp</u>
+                        </p>
+                    </div>
+                    
+                    <div class="col-lg-6">
+                        <p>
+                            Gender: <u>&nbsp<?php echo $gender?>&nbsp</u>
+                        </p>
+                    </div>
+                    
+                    <div class="col-lg-6">
+                        <p>
+                            N0 of Subjects offered: <u>&nbsp<?php echo $num_of_sub?>&nbsp</u>
+                        </p>
+                    </div>
                     
 
     <table class="table table-bordered">
