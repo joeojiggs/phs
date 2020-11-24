@@ -295,8 +295,10 @@ $num_of_sub = mysqli_num_rows($query);
         </div>
 
         <div>
-            <p><b>Class Teacher Remark: </b><u>&nbsp &nbsp <?php if  ($grade == "A"){
-                                echo "(Excellent)";   
+            <p><b>Class Teacher Remark: </b><u>&nbsp &nbsp <?phpif  ($avg > 90){
+                                echo "&nbsp &nbsp(Distinction)";   
+                            }elseif  ($avg > 80 ){
+                                echo "&nbsp &nbsp(Excellent)";   
                             }elseif  ($grade == "B"){
                                 echo "(Good)";
                             }elseif  ($grade == "C"){
