@@ -318,7 +318,7 @@ $num_of_sub = mysqli_num_rows($query);
                             }elseif  ($avg > 80 ){
                                 echo "Wow! What an excellent performance, keep it up dear. Remember you can always do better, so push for the limits...";   
                             }elseif  ($grade == "B"){
-                                echo "(Good)";
+                                echo "A very good result. But like they say, their is always room for improvement. So go for it next time. Nice one dear.";
                             }elseif  ($grade == "C"){
                                 echo "(Average)";
                             }elseif  ($grade == "D"){
