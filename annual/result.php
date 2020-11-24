@@ -87,9 +87,7 @@ $num_of_sub = mysqli_num_rows($query);
                     <br>
                     <img src="../images/phs.jpg" width ="100%">
                     </div>
-                    <p align = "center"><i>this is the school motto</i></p>
-                    <p align = "center">School Address</p>
-                    <p align = "center">school website if any</p>
+
 
                     <h3 align = "center">ANNUAL RESULT REPORT CARD</h3>
                     <hr style = "border: solid 1px black">
