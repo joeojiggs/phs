@@ -142,21 +142,24 @@ $num_of_sub = mysqli_num_rows($query);
         <tr>
         <th>s/n</th>
           <th>Subjects</th>
-          <th>1st Test</th>
+          <th>1st Test (20%)</th>
           <th>  
-            2nd Test
+            2nd Test (20%)
           </th>
           <th>
-            Exam
+            Exam (60%)
           </th>
           <th>
-            Total
+            Total (100%)
           </th>
           <th>
             Grade
           </th>
           <th>
             Position
+          </th>
+          <th>
+            Remark
           </th>
           
           </tr>
