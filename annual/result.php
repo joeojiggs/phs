@@ -83,7 +83,7 @@ $num_of_sub = mysqli_num_rows($query);
             <div class="row">
                 <div class="col-lg-12">
                 <a type="button" href="students.php" class="btn btn-danger"><--back</a>
-                    
+                    <>
                     <img src="../images/phs.jpg" width ="100%">
                     </div>
                     <p align = "center"><i>this is the school motto</i></p>
