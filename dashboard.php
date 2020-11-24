@@ -122,7 +122,7 @@ if (isset($_POST['ses_submit'])){
                 </div>
                     <!-- Button trigger modal -->
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                    Input Academic Session
+                    Input School Fee
                     </button>
 
                     <!-- Modal -->
