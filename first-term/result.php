@@ -309,8 +309,7 @@ $num_of_sub = mysqli_num_rows($query);
         </div>
 
         <div>
-            <p><b>Principals Comment: </b><u>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
-            &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp </u> </p>
+            <p><b>Principals Comment: </b><u>&nbsp &nbsp  &nbsp &nbsp </u> </p>
         </div>
         <div>
             <p>Principal Sign: <u>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp </u> </p>
