@@ -307,7 +307,7 @@ $num_of_sub = mysqli_num_rows($query);
                                 echo "Your performance is fair but you can still improve it by Working harder. Put in more effort next time.";
                             }elseif  ($avg > 50){
                                 echo "An average performance. Please, work harder for an improved result.";
-                            }elseif  ($avg > 50){
+                            }elseif  ($avg < 50){
                                 echo "A below average performance. Please devote more time to your studies for an improved result.";
                             } ?> &nbsp &nbsp </u> </p>
         </div>
