@@ -153,7 +153,7 @@ $num_of_sub = mysqli_num_rows($query);
             Exam (60%)
           </th>
           <th>
-            Total (10%)
+            Total (100%)
           </th>
           <th>
             Grade
