@@ -118,7 +118,7 @@ if (isset($_POST['ses_submit'])){
             if (empty($row['kg']) || empty($row['basic']) || empty($row['jss']) || empty($row['sss'])){
                 ?>
                 <div class="alert alert-danger" role="alert">
-                    School Fees Comment has not been Inputed for Result Compilation. Please Input School Fees Comment for various !
+                    School Fees Comment has not been Inputed for Result Compilation. Please Input School Fees Comment for various schools!
                 </div>
                     <!-- Button trigger modal -->
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
