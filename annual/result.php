@@ -385,7 +385,7 @@ $num_of_sub = mysqli_num_rows($query);
         </div>
         <div>
         <?php if ($class_name == "kg1" || $class_name == "kg2" || $class_name == "kg3" || $class_name == "prenur" ) {
-                            ?> <img src="../images/pcsstamp.png" width ="10%" float> <?php ;
+                            ?> <img src="../images/pcsstamp.png" width ="10%" float:> <?php ;
                         }elseif ($class_name == "basic1" || $class_name == "basic2" || $class_name == "basic3" || $class_name == "basic4" || $class_name == "basic5" ){
                             ?><img src="../images/pcsstamp.png" width ="10%"><?php ;
                         }elseif ( $class_name == "jss1" || $class_name == "jss2" || $class_name == "jss3") {
