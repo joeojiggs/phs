@@ -361,7 +361,9 @@ $num_of_sub = mysqli_num_rows($query);
             <p>Date: <u>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp </u> </p>
         </div>
         <div>
-            <p>School Fees: &nbsp &nbsp <?php ?>  </p>
+            <p>School Fees: &nbsp &nbsp <?php $qurey = mysqli_query($con, "select * from admin");
+            $row = mysqli_fetch_assoc($qurey);
+            echo ($row['session']);?>  </p>
         </div>
         
         <?php
