@@ -91,7 +91,7 @@ $num_of_sub = mysqli_num_rows($query);
                             ?><img src="../images/pcs.jpg" width ="100%"><?php ;
                         }elseif ( $class_name == "jss1" || $class_name == "jss2" || $class_name == "jss3") {
                             ?><img src="../images/phs.jpg" width ="100%"><?php ;
-                        }elseif($class_name == "sss1" || $class_name == "sss2" || $class_name == "sss3" ) {
+                        }elseif ($class_name == "sss1" || $class_name == "sss2" || $class_name == "sss3" ) {
                             ?><img src="../images/phs.jpg" width ="100%"><?php ;
                         }
                     ?>
