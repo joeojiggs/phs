@@ -154,7 +154,7 @@ if (isset($_POST['ses_submit'])){
                                 </div>
 
                                 <div class="form-group">
-                                    <label>SSS 1-</label>
+                                    <label>SSS 1-3</label>
                                     <input class="form-control" placeholder="2019/2020" name="session" REQUIRED>
                                 </div>
                         </div>
