@@ -115,7 +115,7 @@ if (isset($_POST['ses_submit'])){
                 <?php
             }
 
-            if (empty($row['kg'])){
+            if (empty($row['kg']) ){
                 ?>
                 <div class="alert alert-danger" role="alert">
                     Academic Session has not be set. Please Input the Academic Session!
