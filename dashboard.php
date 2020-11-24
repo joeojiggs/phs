@@ -139,7 +139,7 @@ if (isset($_POST['ses_submit'])){
                             <form role="form" method="post">
                                        
                                 <div class="form-group">
-                                    <label>K</label>
+                                    <label>PRE</label>
                                     <input class="form-control" placeholder="2019/2020" name="session" REQUIRED>
                                 </div>
 
