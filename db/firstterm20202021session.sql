@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 18, 2020 at 02:09 PM
+-- Generation Time: Nov 24, 2020 at 01:38 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.4
 
@@ -33,16 +33,13 @@ CREATE TABLE `admin` (
   `password` varchar(225) NOT NULL,
   `user_type` varchar(30) NOT NULL,
   `first_name` varchar(50) NOT NULL,
-  `last_name` varchar(40) NOT NULL
+  `last_name` varchar(40) NOT NULL,
+  `session` varchar(20) NOT NULL,
+  `kg` text NOT NULL,
+  `basic` text NOT NULL,
+  `jss` text NOT NULL,
+  `sss` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `admin`
---
-
-INSERT INTO `admin` (`id`, `email`, `password`, `user_type`, `first_name`, `last_name`) VALUES
-(1, 'admin', '$2y$10$wugEDSa4N7.z4k78G5dg7eVG0ynfBn7m89JZgg41G9onDSqn.S6M6', 'admin', 'Godwin', 'victor'),
-(2, 'ojtechnologiesltd@gmail.com', '$2y$10$kXEX/SkD6s6CZANE8mWZX.wz9Ihezn1fLiBBZohx7hSrK/wrB5fIa', 'admin', 'JOSEPH', 'OJIGHORO');
 
 -- --------------------------------------------------------
 
@@ -58,7 +55,12 @@ CREATE TABLE `basic1_subject1` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -75,7 +77,12 @@ CREATE TABLE `basic1_subject2` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -92,7 +99,12 @@ CREATE TABLE `basic1_subject3` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -109,7 +121,12 @@ CREATE TABLE `basic1_subject4` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -126,7 +143,12 @@ CREATE TABLE `basic1_subject5` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -143,7 +165,12 @@ CREATE TABLE `basic1_subject6` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -160,7 +187,12 @@ CREATE TABLE `basic1_subject7` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -177,7 +209,12 @@ CREATE TABLE `basic1_subject8` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -194,7 +231,12 @@ CREATE TABLE `basic1_subject9` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -211,7 +253,12 @@ CREATE TABLE `basic1_subject10` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -228,7 +275,12 @@ CREATE TABLE `basic1_subject11` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -245,7 +297,12 @@ CREATE TABLE `basic1_subject12` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -262,7 +319,12 @@ CREATE TABLE `basic1_subject13` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -279,7 +341,12 @@ CREATE TABLE `basic1_subject14` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -296,7 +363,12 @@ CREATE TABLE `basic1_subject15` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -325,7 +397,12 @@ CREATE TABLE `basic2_subject1` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -342,7 +419,12 @@ CREATE TABLE `basic2_subject2` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -359,7 +441,12 @@ CREATE TABLE `basic2_subject3` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -376,7 +463,12 @@ CREATE TABLE `basic2_subject4` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -393,7 +485,12 @@ CREATE TABLE `basic2_subject5` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -410,7 +507,12 @@ CREATE TABLE `basic2_subject6` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -427,7 +529,12 @@ CREATE TABLE `basic2_subject7` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -444,7 +551,12 @@ CREATE TABLE `basic2_subject8` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -461,7 +573,12 @@ CREATE TABLE `basic2_subject9` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -478,7 +595,12 @@ CREATE TABLE `basic2_subject10` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -495,7 +617,12 @@ CREATE TABLE `basic2_subject11` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -512,7 +639,12 @@ CREATE TABLE `basic2_subject12` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -529,7 +661,12 @@ CREATE TABLE `basic2_subject13` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -546,7 +683,12 @@ CREATE TABLE `basic2_subject14` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(50) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -563,7 +705,12 @@ CREATE TABLE `basic2_subject15` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -592,7 +739,12 @@ CREATE TABLE `basic3_subject1` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -609,7 +761,12 @@ CREATE TABLE `basic3_subject2` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -626,7 +783,12 @@ CREATE TABLE `basic3_subject3` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -643,7 +805,12 @@ CREATE TABLE `basic3_subject4` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -660,7 +827,12 @@ CREATE TABLE `basic3_subject5` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -677,7 +849,12 @@ CREATE TABLE `basic3_subject6` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -694,7 +871,12 @@ CREATE TABLE `basic3_subject7` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -711,7 +893,12 @@ CREATE TABLE `basic3_subject8` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -728,7 +915,12 @@ CREATE TABLE `basic3_subject9` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -745,7 +937,12 @@ CREATE TABLE `basic3_subject10` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -762,7 +959,12 @@ CREATE TABLE `basic3_subject11` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -779,7 +981,12 @@ CREATE TABLE `basic3_subject12` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -796,7 +1003,12 @@ CREATE TABLE `basic3_subject13` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -813,7 +1025,12 @@ CREATE TABLE `basic3_subject14` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -830,7 +1047,12 @@ CREATE TABLE `basic3_subject15` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -871,7 +1093,12 @@ CREATE TABLE `basic4_subject1` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -888,7 +1115,12 @@ CREATE TABLE `basic4_subject2` (
   `exam` int(11) NOT NULL,
   `Total` varchar(20) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -905,7 +1137,12 @@ CREATE TABLE `basic4_subject3` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -922,7 +1159,12 @@ CREATE TABLE `basic4_subject4` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -939,7 +1181,12 @@ CREATE TABLE `basic4_subject5` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -956,7 +1203,12 @@ CREATE TABLE `basic4_subject6` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -973,7 +1225,12 @@ CREATE TABLE `basic4_subject7` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -990,7 +1247,12 @@ CREATE TABLE `basic4_subject8` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1007,7 +1269,12 @@ CREATE TABLE `basic4_subject9` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1024,7 +1291,12 @@ CREATE TABLE `basic4_subject10` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1041,7 +1313,12 @@ CREATE TABLE `basic4_subject11` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1058,7 +1335,12 @@ CREATE TABLE `basic4_subject12` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1075,7 +1357,12 @@ CREATE TABLE `basic4_subject13` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1092,7 +1379,12 @@ CREATE TABLE `basic4_subject14` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1109,7 +1401,12 @@ CREATE TABLE `basic4_subject15` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1138,7 +1435,12 @@ CREATE TABLE `basic5_subject1` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1155,7 +1457,12 @@ CREATE TABLE `basic5_subject2` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1172,7 +1479,12 @@ CREATE TABLE `basic5_subject3` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1189,7 +1501,12 @@ CREATE TABLE `basic5_subject4` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1206,7 +1523,12 @@ CREATE TABLE `basic5_subject5` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1223,7 +1545,12 @@ CREATE TABLE `basic5_subject6` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1240,7 +1567,12 @@ CREATE TABLE `basic5_subject7` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1257,7 +1589,12 @@ CREATE TABLE `basic5_subject8` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1274,7 +1611,12 @@ CREATE TABLE `basic5_subject9` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1291,7 +1633,12 @@ CREATE TABLE `basic5_subject10` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1308,7 +1655,12 @@ CREATE TABLE `basic5_subject11` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1325,7 +1677,12 @@ CREATE TABLE `basic5_subject12` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1342,7 +1699,12 @@ CREATE TABLE `basic5_subject13` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1359,7 +1721,12 @@ CREATE TABLE `basic5_subject14` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1376,7 +1743,12 @@ CREATE TABLE `basic5_subject15` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1405,7 +1777,12 @@ CREATE TABLE `jss1_subject1` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1422,7 +1799,12 @@ CREATE TABLE `jss1_subject2` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1439,7 +1821,12 @@ CREATE TABLE `jss1_subject3` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1456,7 +1843,12 @@ CREATE TABLE `jss1_subject4` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1473,7 +1865,12 @@ CREATE TABLE `jss1_subject5` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1490,7 +1887,12 @@ CREATE TABLE `jss1_subject6` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1507,7 +1909,12 @@ CREATE TABLE `jss1_subject7` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1524,7 +1931,12 @@ CREATE TABLE `jss1_subject8` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1541,7 +1953,12 @@ CREATE TABLE `jss1_subject9` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1558,7 +1975,12 @@ CREATE TABLE `jss1_subject10` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1575,7 +1997,12 @@ CREATE TABLE `jss1_subject11` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1592,7 +2019,12 @@ CREATE TABLE `jss1_subject12` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1609,7 +2041,12 @@ CREATE TABLE `jss1_subject13` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1626,7 +2063,12 @@ CREATE TABLE `jss1_subject14` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1643,7 +2085,12 @@ CREATE TABLE `jss1_subject15` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1672,7 +2119,12 @@ CREATE TABLE `jss2_subject1` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1689,7 +2141,12 @@ CREATE TABLE `jss2_subject2` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1706,7 +2163,12 @@ CREATE TABLE `jss2_subject3` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1723,7 +2185,12 @@ CREATE TABLE `jss2_subject4` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1740,7 +2207,12 @@ CREATE TABLE `jss2_subject5` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1757,7 +2229,12 @@ CREATE TABLE `jss2_subject6` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1774,7 +2251,12 @@ CREATE TABLE `jss2_subject7` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1791,7 +2273,12 @@ CREATE TABLE `jss2_subject8` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1808,7 +2295,12 @@ CREATE TABLE `jss2_subject9` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1825,7 +2317,12 @@ CREATE TABLE `jss2_subject10` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1842,7 +2339,12 @@ CREATE TABLE `jss2_subject11` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1859,7 +2361,12 @@ CREATE TABLE `jss2_subject12` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1876,7 +2383,12 @@ CREATE TABLE `jss2_subject13` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1893,7 +2405,12 @@ CREATE TABLE `jss2_subject14` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1910,7 +2427,12 @@ CREATE TABLE `jss2_subject15` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1939,7 +2461,12 @@ CREATE TABLE `jss3_subject1` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1956,7 +2483,12 @@ CREATE TABLE `jss3_subject2` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1973,7 +2505,12 @@ CREATE TABLE `jss3_subject3` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1990,7 +2527,12 @@ CREATE TABLE `jss3_subject4` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -2007,7 +2549,12 @@ CREATE TABLE `jss3_subject5` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -2024,7 +2571,12 @@ CREATE TABLE `jss3_subject6` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -2041,7 +2593,12 @@ CREATE TABLE `jss3_subject7` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -2058,7 +2615,12 @@ CREATE TABLE `jss3_subject8` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -2075,7 +2637,12 @@ CREATE TABLE `jss3_subject9` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -2092,7 +2659,12 @@ CREATE TABLE `jss3_subject10` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -2109,7 +2681,12 @@ CREATE TABLE `jss3_subject11` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -2126,7 +2703,12 @@ CREATE TABLE `jss3_subject12` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -2143,7 +2725,12 @@ CREATE TABLE `jss3_subject13` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -2160,7 +2747,12 @@ CREATE TABLE `jss3_subject14` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -2177,7 +2769,12 @@ CREATE TABLE `jss3_subject15` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -2206,7 +2803,11 @@ CREATE TABLE `kg1_subject1` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -2223,7 +2824,11 @@ CREATE TABLE `kg1_subject2` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -2240,7 +2845,11 @@ CREATE TABLE `kg1_subject3` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -2257,7 +2866,11 @@ CREATE TABLE `kg1_subject4` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -2274,7 +2887,11 @@ CREATE TABLE `kg1_subject5` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -2291,7 +2908,11 @@ CREATE TABLE `kg1_subject6` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -2308,7 +2929,11 @@ CREATE TABLE `kg1_subject7` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -2325,7 +2950,11 @@ CREATE TABLE `kg1_subject8` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -2342,7 +2971,11 @@ CREATE TABLE `kg1_subject9` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -2354,12 +2987,16 @@ CREATE TABLE `kg1_subject9` (
 CREATE TABLE `kg1_subject10` (
   `id` int(11) NOT NULL,
   `reg_no` varchar(20) NOT NULL,
-  `first name` int(11) NOT NULL,
+  `first test` int(11) NOT NULL,
   `second test` int(11) NOT NULL,
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -2376,7 +3013,11 @@ CREATE TABLE `kg1_subject11` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -2393,7 +3034,11 @@ CREATE TABLE `kg1_subject12` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -2410,7 +3055,11 @@ CREATE TABLE `kg1_subject13` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -2427,7 +3076,11 @@ CREATE TABLE `kg1_subject14` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -2444,7 +3097,11 @@ CREATE TABLE `kg1_subject15` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -2473,7 +3130,11 @@ CREATE TABLE `kg2_subject1` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -2490,7 +3151,11 @@ CREATE TABLE `kg2_subject2` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -2507,7 +3172,11 @@ CREATE TABLE `kg2_subject3` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -2524,7 +3193,11 @@ CREATE TABLE `kg2_subject4` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(50) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -2541,7 +3214,11 @@ CREATE TABLE `kg2_subject5` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -2558,7 +3235,11 @@ CREATE TABLE `kg2_subject6` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -2575,7 +3256,11 @@ CREATE TABLE `kg2_subject7` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -2592,7 +3277,11 @@ CREATE TABLE `kg2_subject8` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -2609,7 +3298,11 @@ CREATE TABLE `kg2_subject9` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -2626,7 +3319,11 @@ CREATE TABLE `kg2_subject10` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -2643,7 +3340,11 @@ CREATE TABLE `kg2_subject11` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -2660,7 +3361,11 @@ CREATE TABLE `kg2_subject12` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -2677,7 +3382,11 @@ CREATE TABLE `kg2_subject13` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -2694,7 +3403,11 @@ CREATE TABLE `kg2_subject14` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -2711,7 +3424,11 @@ CREATE TABLE `kg2_subject15` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -2740,7 +3457,11 @@ CREATE TABLE `kg3_subject1` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -2757,7 +3478,11 @@ CREATE TABLE `kg3_subject2` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -2774,7 +3499,11 @@ CREATE TABLE `kg3_subject3` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -2791,7 +3520,11 @@ CREATE TABLE `kg3_subject4` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -2808,7 +3541,11 @@ CREATE TABLE `kg3_subject5` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -2825,7 +3562,11 @@ CREATE TABLE `kg3_subject6` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -2842,7 +3583,11 @@ CREATE TABLE `kg3_subject7` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -2859,7 +3604,11 @@ CREATE TABLE `kg3_subject8` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -2876,7 +3625,11 @@ CREATE TABLE `kg3_subject9` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -2893,7 +3646,11 @@ CREATE TABLE `kg3_subject10` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -2910,7 +3667,11 @@ CREATE TABLE `kg3_subject11` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -2927,7 +3688,11 @@ CREATE TABLE `kg3_subject12` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -2944,7 +3709,11 @@ CREATE TABLE `kg3_subject13` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -2961,7 +3730,11 @@ CREATE TABLE `kg3_subject14` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -2978,7 +3751,11 @@ CREATE TABLE `kg3_subject15` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -3019,7 +3796,11 @@ CREATE TABLE `prenur_subject1` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -3036,7 +3817,11 @@ CREATE TABLE `prenur_subject2` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -3053,7 +3838,11 @@ CREATE TABLE `prenur_subject3` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -3070,7 +3859,11 @@ CREATE TABLE `prenur_subject4` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -3087,7 +3880,11 @@ CREATE TABLE `prenur_subject5` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -3104,7 +3901,11 @@ CREATE TABLE `prenur_subject6` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -3121,7 +3922,11 @@ CREATE TABLE `prenur_subject7` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -3138,7 +3943,11 @@ CREATE TABLE `prenur_subject8` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -3155,7 +3964,11 @@ CREATE TABLE `prenur_subject9` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -3172,7 +3985,11 @@ CREATE TABLE `prenur_subject10` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -3189,7 +4006,11 @@ CREATE TABLE `prenur_subject11` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -3206,7 +4027,11 @@ CREATE TABLE `prenur_subject12` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -3223,7 +4048,11 @@ CREATE TABLE `prenur_subject13` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -3240,7 +4069,11 @@ CREATE TABLE `prenur_subject14` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -3257,7 +4090,11 @@ CREATE TABLE `prenur_subject15` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -3286,7 +4123,12 @@ CREATE TABLE `sss1_subject1` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -3303,7 +4145,12 @@ CREATE TABLE `sss1_subject2` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -3320,7 +4167,12 @@ CREATE TABLE `sss1_subject3` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -3337,7 +4189,12 @@ CREATE TABLE `sss1_subject4` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -3354,7 +4211,12 @@ CREATE TABLE `sss1_subject5` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -3371,7 +4233,12 @@ CREATE TABLE `sss1_subject6` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -3388,7 +4255,12 @@ CREATE TABLE `sss1_subject7` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -3405,7 +4277,12 @@ CREATE TABLE `sss1_subject8` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -3422,7 +4299,12 @@ CREATE TABLE `sss1_subject9` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -3439,7 +4321,12 @@ CREATE TABLE `sss1_subject10` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -3456,7 +4343,12 @@ CREATE TABLE `sss1_subject11` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -3473,7 +4365,12 @@ CREATE TABLE `sss1_subject12` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -3490,7 +4387,12 @@ CREATE TABLE `sss1_subject13` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -3507,7 +4409,12 @@ CREATE TABLE `sss1_subject14` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -3524,7 +4431,12 @@ CREATE TABLE `sss1_subject15` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -3553,7 +4465,12 @@ CREATE TABLE `sss2_subject1` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -3570,7 +4487,12 @@ CREATE TABLE `sss2_subject2` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -3587,7 +4509,12 @@ CREATE TABLE `sss2_subject3` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -3604,7 +4531,12 @@ CREATE TABLE `sss2_subject4` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -3621,7 +4553,12 @@ CREATE TABLE `sss2_subject5` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -3638,7 +4575,12 @@ CREATE TABLE `sss2_subject6` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -3655,7 +4597,12 @@ CREATE TABLE `sss2_subject7` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -3672,7 +4619,12 @@ CREATE TABLE `sss2_subject8` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -3689,7 +4641,12 @@ CREATE TABLE `sss2_subject9` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -3706,7 +4663,12 @@ CREATE TABLE `sss2_subject10` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -3723,7 +4685,12 @@ CREATE TABLE `sss2_subject11` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -3740,7 +4707,12 @@ CREATE TABLE `sss2_subject12` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -3757,7 +4729,12 @@ CREATE TABLE `sss2_subject13` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -3774,7 +4751,12 @@ CREATE TABLE `sss2_subject14` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -3791,7 +4773,12 @@ CREATE TABLE `sss2_subject15` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -3820,7 +4807,12 @@ CREATE TABLE `sss3_subject1` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -3837,7 +4829,12 @@ CREATE TABLE `sss3_subject2` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -3854,7 +4851,12 @@ CREATE TABLE `sss3_subject3` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -3871,7 +4873,12 @@ CREATE TABLE `sss3_subject4` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -3888,7 +4895,12 @@ CREATE TABLE `sss3_subject5` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -3905,7 +4917,12 @@ CREATE TABLE `sss3_subject6` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -3922,7 +4939,12 @@ CREATE TABLE `sss3_subject7` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -3939,7 +4961,12 @@ CREATE TABLE `sss3_subject8` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -3956,7 +4983,12 @@ CREATE TABLE `sss3_subject9` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -3973,7 +5005,12 @@ CREATE TABLE `sss3_subject10` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -3990,7 +5027,12 @@ CREATE TABLE `sss3_subject11` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -4007,7 +5049,12 @@ CREATE TABLE `sss3_subject12` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -4024,7 +5071,12 @@ CREATE TABLE `sss3_subject13` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -4041,7 +5093,12 @@ CREATE TABLE `sss3_subject14` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -4058,7 +5115,12 @@ CREATE TABLE `sss3_subject15` (
   `exam` int(11) NOT NULL,
   `Total` int(11) NOT NULL,
   `grade` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL
+  `position` varchar(20) NOT NULL,
+  `grand_total` varchar(20) DEFAULT NULL,
+  `grand_avg` varchar(20) DEFAULT NULL,
+  `grand_grade` varchar(20) DEFAULT NULL,
+  `grand_position` varchar(20) DEFAULT NULL,
+  `third_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -5557,103 +6619,103 @@ ALTER TABLE `students`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `basic1_subject1`
 --
 ALTER TABLE `basic1_subject1`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `basic1_subject2`
 --
 ALTER TABLE `basic1_subject2`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `basic1_subject3`
 --
 ALTER TABLE `basic1_subject3`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `basic1_subject4`
 --
 ALTER TABLE `basic1_subject4`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `basic1_subject5`
 --
 ALTER TABLE `basic1_subject5`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `basic1_subject6`
 --
 ALTER TABLE `basic1_subject6`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `basic1_subject7`
 --
 ALTER TABLE `basic1_subject7`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `basic1_subject8`
 --
 ALTER TABLE `basic1_subject8`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `basic1_subject9`
 --
 ALTER TABLE `basic1_subject9`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `basic1_subject10`
 --
 ALTER TABLE `basic1_subject10`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `basic1_subject11`
 --
 ALTER TABLE `basic1_subject11`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `basic1_subject12`
 --
 ALTER TABLE `basic1_subject12`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `basic1_subject13`
 --
 ALTER TABLE `basic1_subject13`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `basic1_subject14`
 --
 ALTER TABLE `basic1_subject14`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `basic1_subject15`
 --
 ALTER TABLE `basic1_subject15`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `basic1_subject_list`
 --
 ALTER TABLE `basic1_subject_list`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `basic2_subject1`
@@ -6619,85 +7681,85 @@ ALTER TABLE `kg3_subject_list`
 -- AUTO_INCREMENT for table `prenur_subject1`
 --
 ALTER TABLE `prenur_subject1`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `prenur_subject3`
 --
 ALTER TABLE `prenur_subject3`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `prenur_subject4`
 --
 ALTER TABLE `prenur_subject4`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `prenur_subject5`
 --
 ALTER TABLE `prenur_subject5`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `prenur_subject6`
 --
 ALTER TABLE `prenur_subject6`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `prenur_subject7`
 --
 ALTER TABLE `prenur_subject7`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `prenur_subject8`
 --
 ALTER TABLE `prenur_subject8`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `prenur_subject10`
 --
 ALTER TABLE `prenur_subject10`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `prenur_subject11`
 --
 ALTER TABLE `prenur_subject11`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `prenur_subject12`
 --
 ALTER TABLE `prenur_subject12`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `prenur_subject13`
 --
 ALTER TABLE `prenur_subject13`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `prenur_subject14`
 --
 ALTER TABLE `prenur_subject14`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `prenur_subject15`
 --
 ALTER TABLE `prenur_subject15`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `prenur_subject_list`
 --
 ALTER TABLE `prenur_subject_list`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `sss1_subject1`
@@ -6766,6 +7828,12 @@ ALTER TABLE `sss1_subject11`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `sss1_subject12`
+--
+ALTER TABLE `sss1_subject12`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `sss1_subject13`
 --
 ALTER TABLE `sss1_subject13`
@@ -6775,6 +7843,12 @@ ALTER TABLE `sss1_subject13`
 -- AUTO_INCREMENT for table `sss1_subject14`
 --
 ALTER TABLE `sss1_subject14`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `sss1_subject15`
+--
+ALTER TABLE `sss1_subject15`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
@@ -6979,7 +8053,7 @@ ALTER TABLE `sss3_subject_list`
 -- AUTO_INCREMENT for table `students`
 --
 ALTER TABLE `students`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
