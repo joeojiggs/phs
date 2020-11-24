@@ -29,17 +29,17 @@ if (isset($_POST['grade'])){
                 $total = $row2['Total'];
                 
 
-                if ($total >= 70){
+                if ($total >= 80){
                     $grade = 'A';
-                }elseif ($total < 70 && $total >= 60 ){
+                }elseif ($total < 80 && $total >= 70 ){
                     $grade = 'B';
-                }elseif ($total < 60 && $total >= 50){
+                }elseif ($total < 70 && $total >= 60){
                     $grade = 'C';
-                }elseif ($total < 50 && $total >= 45){
+                }elseif ($total < 60 && $total >= 55){
                     $grade = 'D';
-                }elseif ($total < 45 && $total >= 40){
+                }elseif ($total < 55 && $total >= 50){
                     $grade = 'E';
-                }elseif($total < 40){
+                }elseif($total < 50){
                     $grade = 'F';
                 }
 
