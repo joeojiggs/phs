@@ -218,7 +218,7 @@ $num_of_sub = mysqli_num_rows($query);
                         <?php echo $row['position']; ?>
                         </td>
                         <td >
-                        <?php echo $grade ;
+                        <?php 
                             if  ($avg > 90){
                                 echo "&nbsp &nbsp(Distinction)";   
                             }elseif  ($avg > 80 ){
