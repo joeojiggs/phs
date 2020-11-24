@@ -389,7 +389,7 @@ $num_of_sub = mysqli_num_rows($query);
                         }elseif ($class_name == "basic1" || $class_name == "basic2" || $class_name == "basic3" || $class_name == "basic4" || $class_name == "basic5" ){
                             ?><img src="../images/pcsstamp.png" width ="10%"><?php ;
                         }elseif ( $class_name == "jss1" || $class_name == "jss2" || $class_name == "jss3") {
-                            ?><img src="../images/phsstamp.png" width ="100%"><?php ;
+                            ?><img src="../images/phsstamp.png" width ="10%"><?php ;
                         }elseif ($class_name == "sss1" || $class_name == "sss2" || $class_name == "sss3" ) {
                             ?><img src="../images/phsstamp.png" width ="100%"><?php ;
                         }
