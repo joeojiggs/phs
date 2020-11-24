@@ -87,7 +87,7 @@ $num_of_sub = mysqli_num_rows($query);
                     <br>
                     <img src="../images/phs.jpg" width ="100%">
                     </div>
-
+        
                     <h3 align = "center">ANNUAL RESULT REPORT CARD</h3>
                     <hr style = "border: solid 1px black">
 
