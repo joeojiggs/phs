@@ -320,7 +320,8 @@ $num_of_sub = mysqli_num_rows($query);
                             }elseif  ($grade == "B"){
                                 echo "A very good result. But like they say, their is always room for improvement. So go for it next time. Nice one dear.";
                             }elseif  ($grade == "C"){
-                                echo "(Average)";
+                                echo "A good result but with added efforts and conscious study you can always do better, trust me.
+                                ";
                             }elseif  ($grade == "D"){
                                 echo "(Pass)";
                             }elseif  ($grade == "E"){
