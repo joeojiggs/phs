@@ -326,7 +326,7 @@ $num_of_sub = mysqli_num_rows($query);
                             }elseif  ($grade == "E"){
                                 echo "A very marginal pass. You really have to work hard at improving your grades to avoid total failure and risk of possible demotion.";
                             }elseif  ($grade == "F"){
-                                echo "(Failed)";
+                                echo "A poor result. Failed. Remember you can always improve. Put in more efforts in your next outing.";
                             } ?> &nbsp &nbsp </u> </p>
         </div>
         <div>
