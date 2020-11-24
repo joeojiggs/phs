@@ -293,7 +293,7 @@ $num_of_sub = mysqli_num_rows($query);
         </div>
 
         <div>
-            <p><b>Class Teacher Remark: </b><u>&nbsp &nbsp <?phpif ($avg > 80) &nbsp &nbsp </u> </p>
+            <p><b>Class Teacher Remark: </b><u>&nbsp &nbsp <?phpif ($avg > 80) ?>&nbsp &nbsp </u> </p>
         </div>
 
         <div>
