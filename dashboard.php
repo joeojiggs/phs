@@ -140,7 +140,7 @@ if (isset($_POST['ses_submit'])){
                                        
                                 <div class="form-group">
                                     <label>PRE NURSERY AND K.G</label>
-                                    <input class="form-control" placeholder="2019/2020" name="session" REQUIRED>
+                                    <input class="form-control" placeholder="Input Various Classes " name="session" REQUIRED>
                                 </div>
 
                                 <div class="form-group">
