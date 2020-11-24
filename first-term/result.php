@@ -325,7 +325,7 @@ $num_of_sub = mysqli_num_rows($query);
                                 echo "A fair result, you really need to put more efforts to your studies to ensure an improved performance next time out. Remember you can always do better.";
                             }elseif  ($avg > 50){
                                 echo "A very marginal pass. You really have to work hard at improving your grades to avoid total failure and risk of possible demotion.";
-                            }elseif  ($avg > 70){
+                            }elseif  ($avg > 50){
                                 echo "A poor result. Failed. Remember you can always improve. Put in more efforts in your next outing.";
                             } ?> &nbsp &nbsp </u> </p>
         </div>
