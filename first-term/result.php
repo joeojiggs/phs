@@ -282,7 +282,7 @@ $num_of_sub = mysqli_num_rows($query);
                             }elseif  ($avg > 50){
                                 echo "Pass";
                             }elseif  ($avg < 50){
-                                echo "Failed)";
+                                echo "Failed";
                             }
                         ?>
                         </b>
