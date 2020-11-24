@@ -251,7 +251,7 @@ $num_of_sub = mysqli_num_rows($query);
                                 echo "&nbsp &nbsp(Distinction)";   
                             }elseif  ($avg > 80 ){
                                 echo "&nbsp &nbsp(Excellent)";   
-                            }elseif  ($grade == "B"){
+                            }elseif  ($avg == "B"){
                                 echo "&nbsp &nbsp(Very Good)";
                             }elseif  ($grade == "C"){
                                 echo "&nbsp &nbsp(Good)";
