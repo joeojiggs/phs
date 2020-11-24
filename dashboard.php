@@ -22,7 +22,8 @@ if (isset($_POST['fee_submit'])){
      
     $session = mysqli_real_escape_string($con,$_POST['session']);
     $session = mysqli_real_escape_string($con,$_POST['session']);
-    
+    $session = mysqli_real_escape_string($con,$_POST['session']);
+    $session = mysqli_real_escape_string($con,$_POST['session']);
 
     $query = mysqli_query($con, "update admin set `session` = '$session'");
 
