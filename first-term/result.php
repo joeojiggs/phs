@@ -317,7 +317,7 @@ $num_of_sub = mysqli_num_rows($query);
                                 echo "An outstanding result. Keep it up and ensure you put more efforts in the subjects that had lower scores... Kudos to you dear.";   
                             }elseif  ($avg > 80 ){
                                 echo "Wow! What an excellent performance, keep it up dear. Remember you can always do better, so push for the limits...";   
-                            }elseif  ($grade == "B"){
+                            }elseif  ($avg > 70){
                                 echo "A very good result. But like they say, their is always room for improvement. So go for it next time. Nice one dear.";
                             }elseif  ($grade == "C"){
                                 echo "A good result but with added efforts and conscious study you can always do better, trust me.";
