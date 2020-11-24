@@ -259,7 +259,7 @@ $num_of_sub = mysqli_num_rows($query);
                                 echo "&nbsp &nbsp(Fair)";
                             }elseif  ($avg > 50){
                                 echo "&nbsp &nbsp(Pass)";
-                            }elseif  ($avg > 70){
+                            }elseif  ($avg  70){
                                 echo "&nbsp &nbsp(Failed)";
                             }
                         ?>
