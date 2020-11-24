@@ -159,7 +159,7 @@ $num_of_sub = mysqli_num_rows($query);
             Position
           </th>
           <th>
-            Position
+            Remark
           </th>
           
           </tr>
