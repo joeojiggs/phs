@@ -269,21 +269,26 @@ $num_of_sub = mysqli_num_rows($query);
                         
                         <td class= "text-primary"><b>
                         <?php echo $grade ;
-                            if  ($grade == "A"){
+                            if  ($avg > 90){
+                                echo "&nbsp &nbsp(Distinction)";   
+                            }elseif  ($avg > 80 ){
                                 echo "&nbsp &nbsp(Excellent)";   
-                            }elseif  ($grade == "B"){
+                            }elseif  ($avg > 70){
+                                echo "&nbsp &nbsp(Very Good)";
+                            }elseif  ($avg > 60){
                                 echo "&nbsp &nbsp(Good)";
-                            }elseif  ($grade == "C"){
-                                echo "&nbsp &nbsp(Average)";
-                            }elseif  ($grade == "D"){
+                            }elseif  ($avg > 55){
+                                echo "&nbsp &nbsp(Fair)";
+                            }elseif  ($avg > 50){
                                 echo "&nbsp &nbsp(Pass)";
-                            }elseif  ($grade == "E"){
-                                echo "&nbsp &nbsp(Poor)";
-                            }elseif  ($grade == "F"){
+                            }elseif  ($avg < 50){
                                 echo "&nbsp &nbsp(Failed)";
                             }
                         ?>
                         </b>
+                        </td>
+                        <td>
+                        
                         </td>
                         <td>
                         
@@ -296,7 +301,7 @@ $num_of_sub = mysqli_num_rows($query);
                 }else {
             ?>
             <tr>
-            <td colspan = "8" align="center">
+            <td colspan = "11" align="center">
           <h2> 
               No Subject assigned to Class
           </h2>
@@ -311,18 +316,43 @@ $num_of_sub = mysqli_num_rows($query);
         <br>
 
         <div>
-            <p>Class Teacher: <u>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
-            &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp </u> </p>
+            <p><b>REMARK: </b><u>&nbsp &nbsp<?php if ($avg > 50){ echo "PASSED"; } else { echo "FAILED"; } ?>&nbsp &nbsp</u> </p>
         </div>
 
         <div>
-            <p>Class Teacher Remark: <u>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
-            &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp </u> </p>
+            <p><b>Class Teacher Remark: </b><u>&nbsp &nbsp <?php if  ($avg > 90){
+                                echo "A brilliant result. Keep it up, I'm super proud of you, dear.";   
+                            }elseif  ($avg > 80 ){
+                                echo "An extraordinary performance, keep it up dear.";   
+                            }elseif  ($avg > 70){
+                                echo "A great outing. Try harder next time for an improved performance.";
+                            }elseif  ($avg > 60){
+                                echo "A fairly nice result but I believe you can do better. Try harder next time out.";
+                            }elseif  ($avg > 55){
+                                echo "Your performance is fair but you can still improve it by Working harder. Put in more effort next time.";
+                            }elseif  ($avg > 50){
+                                echo "An average performance. Please, work harder for an improved result.";
+                            }elseif  ($avg < 50){
+                                echo "A below average performance. Please devote more time to your studies for an improved result.";
+                            } ?> &nbsp &nbsp </u> </p>
         </div>
 
         <div>
-            <p>Principals Comment: <u>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
-            &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp </u> </p>
+            <p><b>Director's Comment: </b><u>&nbsp &nbsp <?php if  ($avg > 90){
+                                echo "An outstanding result. Keep it up and ensure you put more efforts in the subjects that had lower scores... Kudos to you dear.";   
+                            }elseif  ($avg > 80 ){
+                                echo "Wow! What an excellent performance, keep it up dear. Remember you can always do better, so push for the limits...";   
+                            }elseif  ($avg > 70){
+                                echo "A very good result. But like they say, there's is always room for improvement. So go for it next time. Nice one dear.";
+                            }elseif  ($avg > 60){
+                                echo "A good result but with added efforts and conscious study you can always do better, trust me.";
+                            }elseif  ($avg > 55){
+                                echo "A fair result, you really need to put more efforts to your studies to ensure an improved performance next time out. Remember you can always do better.";
+                            }elseif  ($avg > 50){
+                                echo "A very marginal pass. You really have to work hard at improving your grades to avoid total failure and risk of possible demotion.";
+                            }elseif  ($avg < 50){
+                                echo "A poor result. Failed. Remember you can always improve. Put in more efforts in your next outing.";
+                            } ?> &nbsp &nbsp </u> </p>
         </div>
         <div>
             <p>Principal Sign: <u>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp </u> </p>
