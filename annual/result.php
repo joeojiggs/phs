@@ -384,7 +384,16 @@ $num_of_sub = mysqli_num_rows($query);
                             } ?> &nbsp &nbsp </u> </p>
         </div>
         <div>
-            <p>Principal Sign: <u>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp </u> </p>
+        <?php if ($class_name == "kg1" || $class_name == "kg2" || $class_name == "kg3" || $class_name == "prenur" ) {
+                            ?> <img src="../images/pcs.jpg" width ="100%"> <?php ;
+                        }elseif ($class_name == "basic1" || $class_name == "basic2" || $class_name == "basic3" || $class_name == "basic4" || $class_name == "basic5" ){
+                            ?><img src="../images/pcs.jpg" width ="100%"><?php ;
+                        }elseif ( $class_name == "jss1" || $class_name == "jss2" || $class_name == "jss3") {
+                            ?><img src="../images/phs.jpg" width ="100%"><?php ;
+                        }elseif ($class_name == "sss1" || $class_name == "sss2" || $class_name == "sss3" ) {
+                            ?><img src="../images/phs.jpg" width ="100%"><?php ;
+                        }
+                    ?>
         </div>
         <div>
             <p>Date: <u>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp </u> </p>
