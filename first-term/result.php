@@ -302,7 +302,7 @@ $num_of_sub = mysqli_num_rows($query);
                             }elseif  ($grade == "D"){
                                 echo "(Pass)";
                             }elseif  ($grade == "E"){
-                                echo "&nbsp &nbsp(Poor)";
+                                echo "(Poor)";
                             }elseif  ($grade == "F"){
                                 echo "&nbsp &nbsp(Failed)";
                             } ?>&nbsp &nbsp </u> </p>
