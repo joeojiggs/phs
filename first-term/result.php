@@ -365,7 +365,7 @@ $num_of_sub = mysqli_num_rows($query);
             $row = mysqli_fetch_assoc($qurey);
             if($class_name ){
                 echo ($row['session']);
-            }elseif(){
+            }elseif($class_name){
                 echo ($row['session']);
             }elseif(){
                 echo ($row['session']);
