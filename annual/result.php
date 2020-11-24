@@ -85,7 +85,7 @@ $num_of_sub = mysqli_num_rows($query);
                 <a type="button" href="students.php" class="btn btn-danger"><--back</a>
                     <br>
                     <br>
-                    <
+                    <?p?>
                     <img src="../images/phs.jpg" width ="100%">
                     </div>
                     <br>
