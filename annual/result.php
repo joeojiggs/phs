@@ -293,17 +293,19 @@ $num_of_sub = mysqli_num_rows($query);
                         
                         <td class= "text-primary"><b>
                         <?php echo $grade ;
-                            if  ($grade == "A"){
+                            if  ($avg > 90){
+                                echo "&nbsp &nbsp(Distinction)";   
+                            }elseif  ($avg > 80 ){
                                 echo "&nbsp &nbsp(Excellent)";   
-                            }elseif  ($grade == "B"){
+                            }elseif  ($avg > 70){
+                                echo "&nbsp &nbsp(Very Good)";
+                            }elseif  ($avg > 60){
                                 echo "&nbsp &nbsp(Good)";
-                            }elseif  ($grade == "C"){
-                                echo "&nbsp &nbsp(Average)";
-                            }elseif  ($grade == "D"){
+                            }elseif  ($avg > 55){
+                                echo "&nbsp &nbsp(Fair)";
+                            }elseif  ($avg > 50){
                                 echo "&nbsp &nbsp(Pass)";
-                            }elseif  ($grade == "E"){
-                                echo "&nbsp &nbsp(Poor)";
-                            }elseif  ($grade == "F"){
+                            }elseif  ($avg < 50){
                                 echo "&nbsp &nbsp(Failed)";
                             }
                         ?>
