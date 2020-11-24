@@ -25,7 +25,7 @@ if (isset($_POST['fee_submit'])){
     $jss = mysqli_real_escape_string($con,$_POST['jss']);
     $sss = mysqli_real_escape_string($con,$_POST['sss']);
 
-    $query = mysqli_query($con, "update admin set `kg` = '$kg', `basic` = '$basic', `jss` = '$jss', `kg` = '$kg'");
+    $query = mysqli_query($con, "update admin set `kg` = '$kg', `basic` = '$basic', `jss` = '$jss', `sss` = '$kg'");
 
     if (empty($query)){
         echo "<script> alert('Failed to update Session')</script>";
