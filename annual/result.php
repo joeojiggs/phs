@@ -397,7 +397,7 @@ $num_of_sub = mysqli_num_rows($query);
         </div>
         
         <div>
-            <p><b>School Fees: &nbsp &nbsp <?php $qurey = mysqli_query($con, "select * from admin");
+            <p><b>School Fees: <>&nbsp &nbsp <?php $qurey = mysqli_query($con, "select * from admin");
             $row = mysqli_fetch_assoc($qurey);
             if($class_name == "kg1" || $class_name == "kg2" || $class_name == "kg3" || $class_name == "prenur" ){
                 echo ($row['kg']);
