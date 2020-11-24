@@ -245,7 +245,7 @@ $num_of_sub = mysqli_num_rows($query);
                                 echo "Excellent";   
                             }elseif  ($row['grand_avg'] > 70){
                                 echo "Very Good";
-                            }elseif  ($row['grand_total'] > 60){
+                            }elseif  ($row['grand_avg'] > 60){
                                 echo "Good";
                             }elseif  ($row['Total'] > 55){
                                 echo "Fair";
