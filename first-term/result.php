@@ -306,7 +306,7 @@ $num_of_sub = mysqli_num_rows($query);
                             }elseif  ($grade == "D"){
                                 echo "Your performance is fair but you can still improve it by Working harder. Put in more effort next time.";
                             }elseif  ($grade == "E"){
-                                echo "(Poor)";
+                                echo "An average performance. Please, work harder for an improved result.";
                             }elseif  ($grade == "F"){
                                 echo "(Failed)";
                             } ?>&nbsp &nbsp </u> </p>
