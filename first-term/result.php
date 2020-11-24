@@ -369,7 +369,7 @@ $num_of_sub = mysqli_num_rows($query);
                 echo ($row['basic']);
             }elseif( $class_name == "jss1" || $class_name == "jss2" || $class_name == "jss3"){
                 echo ($row['jss']);
-            }elseif($class_name == "sss1"){
+            }elseif($class_name == "sss1" || ){
                 echo ($row['sss']);
             }
              ?>  </p>
