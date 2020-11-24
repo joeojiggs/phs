@@ -299,7 +299,7 @@ $num_of_sub = mysqli_num_rows($query);
                                 echo "A brilliant result. Keep it up, I'm super proud of you, dear.";   
                             }elseif  ($avg > 80 ){
                                 echo "An extraordinary performance, keep it up dear.";   
-                            }elseif  ($grade == "B"){
+                            }elseif  ($avg > 70){
                                 echo "A great outing. Try harder next time for an improved performance.";
                             }elseif  ($grade == "C"){
                                 echo "A fairly nice result but I believe you can do better. Try harder next time out.";
