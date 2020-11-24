@@ -305,7 +305,7 @@ $num_of_sub = mysqli_num_rows($query);
                                 echo "A fairly nice result but I believe you can do better. Try harder next time out.";
                             }elseif  ($avg > 55){
                                 echo "Your performance is fair but you can still improve it by Working harder. Put in more effort next time.";
-                            }elseif  ($grade == "E"){
+                            }elseif  ($avg > 50){
                                 echo "An average performance. Please, work harder for an improved result.";
                             }elseif  ($grade == "F"){
                                 echo "A below average performance. Please devote more time to your studies for an improved result.";
