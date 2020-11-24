@@ -150,10 +150,10 @@ $num_of_sub = mysqli_num_rows($query);
             3rd Test (20%)
           </th>
           <th>
-            Exam (10%)
+            Exam (60%)
           </th>
           <th>
-            Total
+            Total (10%)
           </th>
           <th>
             Grade
