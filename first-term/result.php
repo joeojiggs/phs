@@ -217,7 +217,26 @@ $num_of_sub = mysqli_num_rows($query);
                         <td>
                         <?php echo $row['position']; ?>
                         </td>
-                        
+                        <td class= "text-primary"><b>
+                        <?php echo $grade ;
+                            if  ($avg > 90){
+                                echo "&nbsp &nbsp(Distinction)";   
+                            }elseif  ($avg > 80 ){
+                                echo "&nbsp &nbsp(Excellent)";   
+                            }elseif  ($avg > 70){
+                                echo "&nbsp &nbsp(Very Good)";
+                            }elseif  ($avg > 60){
+                                echo "&nbsp &nbsp(Good)";
+                            }elseif  ($avg > 55){
+                                echo "&nbsp &nbsp(Fair)";
+                            }elseif  ($avg > 50){
+                                echo "&nbsp &nbsp(Pass)";
+                            }elseif  ($avg < 50){
+                                echo "&nbsp &nbsp(Failed)";
+                            }
+                        ?>
+                        </b>
+                        </td>
                         
                         
                         </tr>
