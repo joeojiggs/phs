@@ -99,25 +99,22 @@ $num_of_sub = mysqli_num_rows($query);
                 
                     <div class="col-lg-6">
                         <p>
-                            Students' Name: <u>&nbsp<?php echo $stud_name?>&nbsp</u>
+                            Name: <u>&nbsp<?php echo $stud_name?>&nbsp</u>
                         </p>
                     </div>
                         
                     <div class="col-lg-6">
                         <p>
-                            Overall Class Position: <u>&nbsp<?php echo $position?>&nbsp</u>
+                            Overall Class Position: <u>&nbsp<?php echo $position?>&nbsp</u> Out of <u>&nbsp<?php echo $num_of_stud_in_class?>&nbsp</u>
                         </p>
                     </div>
                         
                     <div class="col-lg-6">
                         <p>
-                            Class: <u>&nbsp<?php echo $class_name?>&nbsp</u>
-                        </p>
-                    </div>
-                        
-                    <div class="col-lg-6">
-                        <p>
-                            N0 of Students in Class: <u>&nbsp<?php echo $num_of_stud_in_class?>&nbsp</u>
+                            Class: <u>&nbsp<?php echo $class_name?>&nbsp</u> Academic Session: <u>&nbsp<?php $qurey = mysqli_query($con, "select * from admin");
+            $row = mysqli_fetch_assoc($qurey);
+            echo ($row['session']);
+                ?>&nbsp</u> Term: <u>&nbsp First Term &nbsp</u>
                         </p>
                     </div>
                     
@@ -135,12 +132,6 @@ $num_of_sub = mysqli_num_rows($query);
                     
                     <div class="col-lg-6">
                         <p>
-                            Gender: <u>&nbsp<?php echo $gender?>&nbsp</u>
-                        </p>
-                    </div>
-                    
-                    <div class="col-lg-6">
-                        <p>
                             N0 of Subjects offered: <u>&nbsp<?php echo $num_of_sub?>&nbsp</u>
                         </p>
                     </div>
@@ -151,24 +142,27 @@ $num_of_sub = mysqli_num_rows($query);
         <tr>
         <th>s/n</th>
           <th>Subjects</th>
-          <th>1st Test</th>
+          <th>1st Test (10%)</th>
           <th>  
-            2nd Test
+            2nd Test (10%)
           </th>
           <th>  
-            3rd Test
+            3rd Test (20%)
           </th>
           <th>
-            Exam
+            Exam (60%)
           </th>
           <th>
-            Total
+            Total (100%)
           </th>
           <th>
             Grade
           </th>
           <th>
             Position
+          </th>
+          <th>
+            Remark
           </th>
           
           </tr>
