@@ -20,7 +20,7 @@ if (isset($_POST['ses_submit'])){
 
 if (isset($_POST['fee_submit'])){
      
-    $session = mysqli_real_escape_string($con,$_POST['session']);
+    $session = mysqli_real_escape_string($con,$_POST['kg']);
     $session = mysqli_real_escape_string($con,$_POST['session']);
     $session = mysqli_real_escape_string($con,$_POST['session']);
     $session = mysqli_real_escape_string($con,$_POST['session']);
