@@ -153,7 +153,7 @@ $num_of_sub = mysqli_num_rows($query);
             Total (300)
           </th>
           <th>
-            Average
+            Average (100%)
           </th>
           <th>
             Grade
