@@ -367,7 +367,7 @@ $num_of_sub = mysqli_num_rows($query);
                 echo ($row['session']);
             }elseif($class_name == "basic1"){
                 echo ($row['session']);
-            }elseif( $class_name ==){
+            }elseif( $class_name == ""){
                 echo ($row['session']);
             }elseif($class_name ==){
                 echo ($row['session']);
