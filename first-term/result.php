@@ -370,7 +370,7 @@ $num_of_sub = mysqli_num_rows($query);
             }elseif( $class_name == "jss1"){
                 echo ($row['jss']);
             }elseif($class_name == "sss1"){
-                echo ($row['session']);
+                echo ($row['sss']);
             }
              ?>  </p>
         </div>
