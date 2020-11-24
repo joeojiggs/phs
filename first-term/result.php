@@ -230,7 +230,7 @@ $num_of_sub = mysqli_num_rows($query);
                             }elseif  ($row['Total'] > 55){
                                 echo "&nbsp &nbsp(Fair)";
                             }elseif  ($row['Total'] > 50){
-                                echo "&nbsp &nbsp(Pass)";
+                                echo "Pass)";
                             }elseif  ($row['Total'] < 50){
                                 echo "Failed";
                             }
