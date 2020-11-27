@@ -131,7 +131,6 @@ if (isset($_POST['save'])){
             while($row = mysqli_fetch_array($query)) {
                 ?> 
                 <tr>
-                $reg = $row['reg_no'];
                 <?php $query2 = mysqli_query($con,"select * from students where Reg_Num ='$reg'"); $row2 = mysqli_fetch_array($query2);  $name = $row2['First_Name'].' '.$row2['Mid_Name'].' '.$row2['Last_Name']; ?>
                 <td><?php echo $i ?></td>
                 <td><?php echo $row['reg_no'] ?></td>
