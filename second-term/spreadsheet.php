@@ -85,7 +85,8 @@ if (isset($_POST['process'])){
 
                 $avg = $grand_total/$num_of_sub;
 
-                
+                $avg = round ($avg, 2);
+
 
                  $sql4 = "update students set `second_total` = '$grand_total', `second_avg` = '$avg' where Reg_Num = '$reg_no' and Class='$class_name'";
                  $query4 = mysqli_query ($con, $sql4);
