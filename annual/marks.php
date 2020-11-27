@@ -39,6 +39,8 @@ if (isset($_POST['grade'])){
 
                 $avg = $grand_total/3;
 
+                
+
                  $sql4 = "update ".$class_name."_".$sub_id." set `grand_total` = '$grand_total', `grand_avg` = '$avg' where reg_no = '$reg_no'";
                  $query4 = mysqli_query ($con, $sql4);
                         
