@@ -69,19 +69,21 @@ if (isset($_POST['grade'])){
                 $total = $row2['grand_total'];
                 
 
-                if ($total >= 80){
+                $avggg = $row2['grand_avg'];
+                if ($avggg >= 80){
                     $grade = 'A';
-                }elseif ($total < 80 && $total >= 70 ){
+                }elseif ($avggg < 80 && $avggg >= 70 ){
                     $grade = 'B';
-                }elseif ($total < 70 && $total >= 60){
+                }elseif ($avggg < 70 && $avggg >= 60){
                     $grade = 'C';
-                }elseif ($total < 60 && $total >= 55){
+                }elseif ($avggg < 60 && $avggg >= 55){
                     $grade = 'D';
-                }elseif ($total < 55 && $total >= 50){
+                }elseif ($avggg < 55 && $avggg >= 50){
                     $grade = 'E';
-                }elseif($total < 50){
+                }elseif($avggg < 50){
                     $grade = 'F';
                 }
+
 
                 if ($total != 0){
                     if ($total != $last_total){
