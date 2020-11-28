@@ -102,7 +102,7 @@ if (isset($_POST['process'])){
     $i=1;
     $last_avg = "";
     $last_i;
-    $sql ="select * from students where Class='$class_name' and second_total != '$olodo' order by length(second_total), second_total DESC";
+    $sql ="select * from students where Class='$class_name' and second_total != '$olodo' order by second_total DESC";
     $query= mysqli_query($con,$sql);
         if (mysqli_num_rows($query) > 0) {
 
